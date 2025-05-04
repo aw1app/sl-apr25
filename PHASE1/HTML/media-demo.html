@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 
+<h2>Video tag demo</h2>
 <video controls width="300">
-
+    <!-- Browser will ignore the first because they don't understand video/mp555 format-->
     <source src="VIDEOS/chemistry-lab.mp4" type="video/mp555" />
+     <!-- Browser will render the second below because they understand video/mp4 format-->
     <source src="VIDEOS/chemistry-lab.mp4" type="video/mp4" />
+     <!-- Browser will ignore the third below because they have already rendered the second above-->
     <source src="VIDEOS/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
 </video>
 
 <video controls autoplay width="640"> 
-
     <source src="VIDEOS/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
-
-
 </video>
+
+<video controls width="640"> 
+    <source src="https://www.youtube.com/watch?v=dI8EQU0PFzc" type="video/mp4" />
+</video>
+
+
+
+
+<h2>Audio tag demo</h2>
+<audio controls>
+    <source src="AUDIO/SampleAudio_0.4mb.mp3" type="audio/mp3" />
+
+</audio>
