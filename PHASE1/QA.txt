@@ -1,0 +1,5 @@
+
+Task 1: 
+Create a table in current html file.
+Add a css rule (selector) in the external css file such that table heading
+is bold font and it's background is green
