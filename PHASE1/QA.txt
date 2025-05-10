@@ -3,3 +3,20 @@ Task 1:
 Create a table in current html file.
 Add a css rule (selector) in the external css file such that table heading
 is  font 24px size  and it's background is lightgreen
+
+
+Task2:
+<div id="profile">
+  <h2 class="name">Jane Doe</h2>
+  <p class="role">Frontend Developer</p>
+  <div class="contact">
+    <p>Email: <a href="mailto:jane@example.com">jane@example.com</a></p>
+    <p>Phone: <a href="tel:+123456789">+1 234 567 89</a></p>
+  </div>
+  <ul class="skills">
+    <li>HTML</li>
+    <li class="highlight">CSS</li>
+    <li>JavaScript</li>
+    <li class="highlight">React</li>
+  </ul>
+</div>
