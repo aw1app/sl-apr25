@@ -1,24 +1,37 @@
 <html>
+<head>
+  <style>
+body {background-color: aquamarine;}
+div {  border: 3px solid black;}
+.highlight {background-color: rgb(168, 240, 22); }
+.name { color: red;
+        font-size: 65px;
+      font-style: italic;
+    text-align: center;}
+.role { text-align: center;
+        font-size: 25px;
+         font-weight: bolder;
+}
+ #Contact { text-align: center;
+ }
+ul { font-size:24px;  }
 
-<style>
-    .highlight {
-        background-color: yellow;
-      }
-</style>
-
+  </style>
+</head>
+<body>
 <div id="profile">
-    <h2 class="name">Jane Doe</h2>
-    <p class="role, highlight" >Frontend Developer</p>
-    <div class="contact">
-      <p>Email: <a class="highlight" href="mailto:jane@example.com">jane@example.com</a></p>
-      <p>Phone: <a href="tel:+123456789">+1 234 567 89</a></p>
-    </div>
-    <ul class="skills">
-      <li>HTML</li>
-      <li class="highlight">CSS</li>
-      <li>JavaScript</li>
-      <li class="highlight">React</li>
-    </ul>
-  </div>
-
-  </html>
+    <h1 class="name">Jane Doe</h1>
+    <p class="role">Frontend Developer</p>
+   <h2 id="Contact">
+      <p>Email: <a href="mailto:jane@example.com">jane@example.com</a></p>
+      <p>Phone: <a href="tel:+123456789">+1 234 567 89</a></p>
+  </h2>
+    <ul class="skills">
+      <li>HTML</li>
+      <li class="highlight" style=" display: inline;">CSS</li>
+      <li>JavaScript</li>
+      <li class="highlight" style=" display: inline;">React</li>
+    </ul>
+  </div>
+</body>
+</html>
