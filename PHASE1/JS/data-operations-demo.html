@@ -1,0 +1,36 @@
+<script>
+    let x = 10;
+    let y = 5;
+
+    let z = x + y;
+
+
+    let x1 = 170;
+    let y1 = 35;
+    let z1 = x1 + y1;
+
+    function add(a,b){
+        let c = parseInt(a) + parseInt(b);
+        return c;
+    }
+
+    let x2 = 11;
+    let y2 = 34;
+    let z3 = add(x2,y2);
+
+    //alert("z3="+ z3);
+
+</script>
+
+<body>
+    <div id="messages" style="font-size: 16px; font-weight: bold;">   </div>
+
+    <script>        //alert("z=" + z);    </script>
+
+    <input type="text" id="varA"> <input type="text" id="varB"> 
+    <br>
+    <input type="button" value="ADD" 
+    onclick="document.getElementById('messages').innerHTML = add(document.getElementById('varA').value, document.getElementById('varB').value)">
+
+    TASK1: Create
+</body>
