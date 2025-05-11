@@ -1,0 +1,99 @@
+<script>
+    // demo while loop
+
+    let i = 5;
+
+    while (i < 10) {
+        console.log("i=" + i);
+        i++;
+    };
+    // output 5, 6, 7,8, 9
+    console.log("------");
+    // while with break
+    let j = 5;
+    while (j < 10) {
+        console.log("j=" + j);
+        if (j == 8) break;
+        j++;
+    };
+    // output 5, 6, 7, 8
+
+    console.log("------");
+
+    //demo while with continue
+    let k = 5;
+    while (k < 10) {
+        k++;
+        if (k == 8) continue; // continue means skip the remaining statement and carry on with the next iteration
+
+        console.log("k=" + k);
+    };
+
+</script>
+
+<!-- FOR LOOP DEMO -->
+<script>
+    console.log(" ** FOR LOOP DEMO ** ");
+
+    for( x=0; x<4 ; x=x+2){
+        console.log("x=" + x); 
+    };// 0,2
+
+
+</script>
+
+<!-- IF ELSE DEMO -->
+<script>
+    console.log(" ** IF ELSE DEMO ** ");
+
+    let drinkCoffee=true;
+    let drinkTea=true;
+
+    if(drinkCoffee==true){
+         console.log(" I will drink coffee today");
+    }
+
+    if(drinkCoffee==false){
+        console.log(" I will drink coffee today");
+   }else if(drinkTea==false) {
+    console.log(" I will not drink tea today");
+   }else{
+    console.log("I will drink something chill");
+   }
+
+</script>
+
+<!-- SWITCH  DEMO -->
+<script>
+    console.log(" ** SWITCH DEMO ** ");
+    let day = new Date().getDay(); // 0,1,2,3,4,5,6
+    console.log(day);
+    //day =14;
+
+    switch (day) {
+        case 0:
+            console.log('Today is Sunday.');
+            break;
+        case 1:
+            console.log('Today is Monday.');
+            break;
+        case 2:
+            console.log('Today is Tuesday.');
+            break;
+        case 3:
+            console.log('Today is Wednesday.');
+            break;
+        case 4:
+            console.log('Today is Thursday.');
+            break;
+        case 5:
+            console.log('Today is Friday.');
+            break;
+        case 6:
+            console.log('Today is Saturday.');
+            break;
+        default:
+            console.log('Invalid day.');
+    }
+
+</script>
