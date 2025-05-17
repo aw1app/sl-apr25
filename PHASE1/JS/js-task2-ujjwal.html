@@ -1,0 +1,52 @@
+<script>
+    alert("Welcome to the ATM!");
+    let correctPin = "1234";
+    let attempts = 0;
+    let pinEntered;
+    let balance = 100;
+    // PIN verification loop
+    while (attempts < 3) {
+        pinEntered = prompt("Please enter your 4-digit PIN:");
+        if (pinEntered === correctPin) {
+            break;
+        } else {
+            attempts++;
+            alert("Incorrect PIN. Attempt " + attempts + " of 3.");
+        }
+        if (attempts === 3) {
+            alert("Too many incorrect attempts. Exiting...");
+            throw new Error("Access denied.");
+        }
+    }
+    let choice = prompt(
+        "Choose an option:\n1. View Balance\n2. Deposit\n3. Withdraw\n4. Exit"
+    );
+    switch (choice) {
+        case "1":
+            alert("Your current balance is: $" + balance);
+            break;
+        case "2":
+            let depositAmount = Number(prompt("Enter amount to deposit:"));
+            if (depositAmount > 0) {
+                balance += depositAmount;
+                alert("Deposit successful! New balance: $" + balance);
+            } else {
+                alert("Invalid amount.");
+            }
+            break;
+        case "3":
+            let withdrawAmount = Number(prompt("Enter amount to withdraw:"));
+            if (withdrawAmount > balance) {
+                alert("Insufficient funds.");
+            } else {
+                balance -= withdrawAmount;
+                alert("Withdrawal successful! New balance: $" + balance);
+            }
+            break;
+        case "4":
+            alert("Thank you for using the ATM. Goodbye!");
+            break;
+        default:
+            alert("Invalid choice.");
+    }
+</script>

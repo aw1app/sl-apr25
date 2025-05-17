@@ -1,0 +1,51 @@
+<script>
+    const correctPIN = "1234";
+    let attempts = 0;
+    let isAuthenticated = false;
+    let balance = 1000;
+
+    while (attempts < 3) {
+        let userPIN = prompt("Please enter your 4-digit PIN:");
+        if (userPIN === correctPIN) {
+            isAuthenticated = true;
+            break;
+        } else {
+            attempts++;
+            alert("Incorrect PIN. Attempts left: " + (3 - attempts));
+        }
+    }
+
+    //
+    if (!isAuthenticated) {
+        alert("Too many incorrect attempts. Exiting program.");
+    } else {
+        let choice = prompt(
+            "Select an option:\n1. View Balance\n2. Deposit\n3. Withdraw\n4. Exit"
+        );
+        choice = parseInt (choice);
+
+
+        switch (choice) {
+            case 1: alert("Your acct balance is " + balance);
+                break;
+            case 2:
+                break;
+            case 3:
+                let wdAmount = prompt("Enter withdrawl amount");
+                wdAmount = parseInt (wdAmount);
+
+                if (wdAmount > balance)
+                    alert("Your acct balance is less than your withdrawl amount. So not allowed ");
+                else {
+                    balance = balance - wdAmount;
+                    alert(" Withdrawl success. You new balance is  " + balance);
+                }
+
+                break;
+            case 4: alert("Thank you. Exiting");
+
+        }
+
+    }
+
+</script>

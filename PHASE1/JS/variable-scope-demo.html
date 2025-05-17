@@ -1,0 +1,42 @@
+<script>
+
+var x=10;
+
+console.log("1 x=" + x); // x=10;
+
+
+function f1(){
+    console.log("2 x=" + x); // x=10;
+
+    var y=15;
+    console.log("1 y=" + y); // y=15;
+
+
+    for (var z = 100; z<102; z++) {
+        console.log("1 z=" + z); 
+    }
+
+    console.log("2 z=" + z); 
+
+    for (let p = 100; p<102; p++) {
+        console.log("1 p=" + p);   // p=102
+    }
+
+   // ERROR console.log("2 p=" + p); // ERROR p is block scoped and cannot be accessed outside the block
+
+}
+
+// ERROR console.log("2 y=" + y);
+// ERROR console.log("3 z=" + z); 
+
+console.log("3 x=" + x); // x=10;
+
+f1();
+
+</script>
+
+
+<script>
+    console.log("4 x=" + x); // x=10;
+
+</script>
