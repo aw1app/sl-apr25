@@ -1,0 +1,62 @@
+<script>
+    <!-- Paddy -->
+    function Employee(firstname, lastname, department) {
+        this.firstName = firstname;
+        this.lastName = lastname;
+        this.Department = department;
+        this.calculateSalary = function (salary) {
+            this.Salary = salary;
+            console.log("salary of the employer " + this.firstName + " " + this.lastName + "is " + this.Salary);
+        }
+    }
+    let employee1 = new Employee('johnson', 'miller', 'hr');
+    let employee2 = new Employee('sandy', 'jones', 'IT');
+    employee1.calculateSalary(1000);
+    employee2.calculateSalary(3000);
+
+
+</script>
+
+
+<script>
+    class Employee {
+        constructor(name, age, salary) {
+            this.name = name;
+            this.age = age;
+            this.salary = salary;
+        }
+        role() {
+            console.log("designs UI/UX");
+        }
+        income() {
+            console.log("salary is " + this.salary);
+        }
+    }
+    let emp1 = new Employee("John", 30, 50000);
+    let emp2 = new Employee("Jane", 25, 60000);
+    emp1.role();
+    emp1.income();
+    emp2.role();
+    emp2.income();
+</script>
+
+<script>
+
+    <!-- Akul -->
+    class Emoplyee {
+        constructor(name, code, mail) {
+            this.empName = name;
+            this.empCode = code;
+            this.empMail = mail;
+        }
+    }
+    let emp11 = new Emoplyee("Mark", 112245, "mark@mail.com");
+    let emp21 = new Emoplyee("Rahul", 112245, "rahul@mail.com");
+    console.log("Employee 1 details : \nName: " + emp11.empName
+        + "\nEmplyee Code: " + emp11.empCode
+        + "\nMail ID: " + emp11.empMail);
+    console.log("Employee 2 details : \nName: " + emp21.empName
+        + "\nEmplyee Code: " + emp21.empCode
+        + "\nMail ID: " + emp21.empMail);
+
+</script>
