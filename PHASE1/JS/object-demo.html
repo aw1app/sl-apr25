@@ -1,40 +1,61 @@
-
 <!-- Traditional way of defining a object template -->
 <script>
 
-function Student( n , a , p){
-this.name = n;
-this.age = a;
-this.phone = p;
+    function Student(n, a, p) {
+        this.name = n;
+        this.age = a;
+        this.phone = p;
 
-}
+        this.giveExam = function (subject) {
+            console.log(this.name + " is writing " + subject + " exam. Hope will pass in first class.");
+        }
+
+    }
 
 
-// Based on the object template created above, we can create any number of objects.
-let student1 = new Student("Suresh", 19, 9099000001);
-let student2 = new Student("Mohan", 22, 6764764676);
+    // Based on the object template created above, we can create any number of objects.
+    let student1 = new Student("Suresh", 19, 9099000001);
+    let student2 = new Student("Mohan", 22, 6764764676);
 
+    student1.giveExam("Maths");
+    student1.giveExam("Science");
 
-console.log("Student no 1 's name " + student1.name);
-console.log("Student no 2 's name " + student2.name);
+    console.log("Student no 1 's name " + student1.name);
+    console.log("Student no 2 's name " + student2.name);
 
 </script>
 
 
 <!-- Modern way of defining a object template using Class keyword-->
 <script>
-class Car {
+    class Car {
+        // properties of the car class
+        constructor(n, y) {
+            this.name = n;
+            this.modelyear = y;
+        }
 
-    constructor(n,y){
-        this.name=n;
-        this.modelyear =y;
+        // Behaviours of the Car class
+        drive(speed) {
+            console.log(" Driving the car " + this.name + " with speed = " + speed + " miles/hr.");
+        }
+
+        park() {
+            console.log(" Parking the car...")
+        }
+
+
     }
 
-}
+    let car1 = new Car("Toyota", 1995);
+    let car2 = new Car("Ford", 2009);
 
-let car1 = new Car("Toyota", 1995);
-let car2 = new Car("Ford", 2009);
+    console.log("Car no 1 's name " + car1.name + " and its model is " + car1.modelyear);
+    console.log("Car no 2 's name " + car2.name);
 
-console.log("Car no 1 's name " + car1.name + " and its model is " + car1.modelyear);
-console.log("Car no 2 's name " + car2.name);
+    car1.drive(100);
+    car2.drive(150);
 </script>
+
+
+TASK: Model a Employee. Then create 2 employees and print thier properties on the console. 
