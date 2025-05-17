@@ -7,6 +7,9 @@
         this.calculateSalary = function (salary) {
             this.Salary = salary;
             console.log("salary of the employer " + this.firstName + " " + this.lastName + "is " + this.Salary);
+
+            // Same as above but using string literals
+            console.log(`STRING LITERAL DEMO salary of the employer ${this.firstName}  ${this.lastName} ${this.Salary}`);
         }
     }
     let employee1 = new Employee('johnson', 'miller', 'hr');
@@ -19,12 +22,12 @@
 
 
 <script>
-    class Employee {
+    class GovtEmployee {
         constructor(name, age, salary) {
             this.name = name;
             this.age = age;
             this.salary = salary;
-        }
+        }   
         role() {
             console.log("designs UI/UX");
         }
@@ -32,8 +35,8 @@
             console.log("salary is " + this.salary);
         }
     }
-    let emp1 = new Employee("John", 30, 50000);
-    let emp2 = new Employee("Jane", 25, 60000);
+    let emp1 = new GovtEmployee("John", 30, 50000);
+    let emp2 = new GovtEmployee("Jane", 25, 60000);
     emp1.role();
     emp1.income();
     emp2.role();

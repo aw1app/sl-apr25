@@ -59,3 +59,31 @@
 
 
 OBJECT-TASK-1: Model a Employee. Then create 2 employees and print thier properties on the console. 
+
+<!-- object literals. Use this approach to straight away create objects without defining any template]-->
+<script>
+
+    let user1 = {
+        name: "JACK",
+        age: 24,
+
+        takeExam:  function (subject) {
+            console.log(`${this.name} is writing ${subject}  exam. Hope will pass in first class.`);
+        }
+    };
+
+    let user2 = {
+        name: "Jenny",
+        age: 25
+    };
+
+
+    user1.takeExam("English");
+
+    // ERROR user2.takeExam("English");
+
+   
+
+</script>
+
+
