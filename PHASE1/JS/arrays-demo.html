@@ -86,3 +86,38 @@ Add another person and then Calculate average age;
 <br><br><br><br>
 <b>ARRAY-TASK-2</b>: Can you also print those names whose age is > 30?
 You may do some research on the internet.
+
+
+<script>
+    const people = [
+      { name: 'Alice', age: 30 },
+      { name: 'Sunil', age: 24 },
+      { name: 'Wills', age: 35 },
+      { name: 'Suri', age: 40 },
+    ];
+
+  console.log("*** forEach demo ****");
+// forEach demo
+// first define a function to do when the looping will happen
+// let printName = (name) => console.log(name);
+
+people.forEach ( item =>  console.log (` ${item.name}  ${item.age} ` ) );
+
+// map demo
+console.log("*** map demo ****");
+let agesArr = people.map  ( item => item.age ); // agesArr = [ 30 ,24 , 35 ,40 ]
+agesArr.forEach ( item =>  console.log (item));
+
+
+// another map example
+// suppose you have an array nums [1,2,3,4] and you want an array that has square of elements of this nums array
+let nums = [1,2,3,4];
+let numsSquares = nums.map ( item => item *item ); // [1,4, 9, 16 ]
+numsSquares.forEach (item => console.log(item));
+
+// TASK: Can you also print those names whose age is > 30?
+// Hint : filter
+
+//sort
+
+</script>
