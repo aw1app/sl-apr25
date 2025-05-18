@@ -1,83 +1,82 @@
-
 <script>
 
-    let colors = [
-            "green",
-            "yellow",
-            "blue",
-            "white",
-            "grey",
-            "red"
-        ];
+  let colors = [
+    "green",
+    "yellow",
+    "blue",
+    "white",
+    "grey",
+    "red"
+  ];
 
 
-        // print all colors
-    console.log(colors);
+  // print all colors
+  console.log(colors);
 
-    // print the white color
-    console.log(colors[3]);  
+  // print the white color
+  console.log(colors[3]);
 
 </script>
 
 <!-- Basic Array functions /methods / operations/ behaviours-->
 <script>
-// push()  - add(insert) a new array item at the end.
-// pop - remove an item from the end 
-// shift - add (insert) a new array item at the start.
-// unshift - remove an item from the start 
-// delete - remove an item at a specified index
+  // push()  - add(insert) a new array item at the end.
+  // pop - remove an item from the end
+  // shift - add (insert) a new array item at the start.
+  // unshift - remove an item from the start
+  // delete - remove an item at a specified index
 
-// slice( start , end ) - extract a portion of the array. original array is not affected (that is no elements are removed from it, instead we get a copy of the items from it)
-// splice (atIndex, howmany ) - remove portion of the array
+  // slice( start , end ) - extract a portion of the array. original array is not affected (that is no elements are removed from it, instead we get a copy of the items from it)
+  // splice (atIndex, howmany ) - remove portion of the array
 
-// forEach  - used for iteration or looping 
+  // forEach  - used for iteration or looping 
 
 
 </script>
 
 
 <script>
-// Array of objects;
-console.log(" Array of objects DEMO ");
+  // Array of objects;
+  console.log(" Array of objects DEMO ");
 
-let studentsArray = [
-{name : "Murali", age : 45},
-{name : "John", age : 23},
-{name : "Rahim", age : 24},
-{name : "Sujata", age : 33},
-{name : "Shashi", age : 17},
-];
+  let studentsArray = [
+    { name: "Murali", age: 45 },
+    { name: "John", age: 23 },
+    { name: "Rahim", age: 24 },
+    { name: "Sujata", age: 33 },
+    { name: "Shashi", age: 17 },
+  ];
 
-// Iterate all the students and print the names
-// studentsArray.forEach ()
+  // Iterate all the students and print the names
+  // studentsArray.forEach ()
 
-console.log(studentsArray);
+  console.log(studentsArray);
 
-console.log(" SLICING  DEMO ");
-let slicedArray = studentsArray.slice(1,3);
-console.log("Sliced array fro index 1 to index 3");
-console.log(slicedArray);
-console.log("After slicing original array is ");
-console.log(studentsArray);
+  console.log(" SLICING  DEMO ");
+  let slicedArray = studentsArray.slice(1, 3);
+  console.log("Sliced array fro index 1 to index 3");
+  console.log(slicedArray);
+  console.log("After slicing original array is ");
+  console.log(studentsArray);
 
-console.log(" SPLICING  DEMO ");
-let splicedArray = studentsArray.splice(1,2); // starting at index 1, remove 2 elements
-console.log("Spliced array AT index 1 to remove 2 items");
-console.log(splicedArray);
-console.log("After splicing original array is ");
-console.log(studentsArray);
+  console.log(" SPLICING  DEMO ");
+  let splicedArray = studentsArray.splice(1, 2); // starting at index 1, remove 2 elements
+  console.log("Spliced array AT index 1 to remove 2 items");
+  console.log(splicedArray);
+  console.log("After splicing original array is ");
+  console.log(studentsArray);
 
 </script>
 
 
-<b>ARRAY-TASK-1</b>: 
+<b>ARRAY-TASK-1</b>:
 given:
 <br><br>
 const people = [
-  { name: 'Alice', age: 30 },
-  { name: 'Sunil', age: 24 },
-  { name: 'Wills', age: 35 },
-  { name: 'Suri', age: 40 },
+{ name: 'Alice', age: 30 },
+{ name: 'Sunil', age: 24 },
+{ name: 'Wills', age: 35 },
+{ name: 'Suri', age: 40 },
 ];
 
 <br><br>
@@ -89,35 +88,46 @@ You may do some research on the internet.
 
 
 <script>
-    const people = [
-      { name: 'Alice', age: 30 },
-      { name: 'Sunil', age: 24 },
-      { name: 'Wills', age: 35 },
-      { name: 'Suri', age: 40 },
-    ];
+  const people = [
+    { name: 'Alice', age: 30 },
+    { name: 'Sunil', age: 24 },
+    { name: 'Wills', age: 35 },
+    { name: 'Suri', age: 40 },
+  ];
 
   console.log("*** forEach demo ****");
-// forEach demo
-// first define a function to do when the looping will happen
-// let printName = (name) => console.log(name);
+  // forEach demo
+  // first define a function to do when the looping will happen
+  // let printName = (name) => console.log(name);
 
-people.forEach ( item =>  console.log (` ${item.name}  ${item.age} ` ) );
+  people.forEach(item => console.log(` ${item.name}  ${item.age} `));
 
-// map demo
-console.log("*** map demo ****");
-let agesArr = people.map  ( item => item.age ); // agesArr = [ 30 ,24 , 35 ,40 ]
-agesArr.forEach ( item =>  console.log (item));
+  // map demo
+  console.log("*** map demo ****");
+  let agesArr = people.map(item => item.age); // agesArr = [ 30 ,24 , 35 ,40 ]
+  agesArr.forEach(item => console.log(item));
 
 
-// another map example
-// suppose you have an array nums [1,2,3,4] and you want an array that has square of elements of this nums array
-let nums = [1,2,3,4];
-let numsSquares = nums.map ( item => item *item ); // [1,4, 9, 16 ]
-numsSquares.forEach (item => console.log(item));
+  // another map example
+  // suppose you have an array nums [1,2,3,4] and you want an array that has square of elements of this nums array
+  let nums = [1, 2, 3, 4];
+  let numsSquares = nums.map(item => item * item); // [1,4, 9, 16 ]
+  numsSquares.forEach(item => console.log(item));
 
-// TASK: Can you also print those names whose age is > 30?
-// Hint : filter
+  // TASK: Can you also print those names in people array above whose age is > 30?
+  // Hint : filter
+  // SOL:
 
-//sort
+  let olderpeopleArray = people.filter(item => item.age > 30);
+  // console.log("Older people: ", olderpeopleArray); OR
+  olderpeopleArray.forEach(item => console.log(item.name))
+
+  //sort
+  //sort the array by age
+  let sortedPeople = people.sort( (a, b) => a.age - b.age );
+  console.log("1 Sorted People by Age: ", sortedPeople);
+  let sortedPeople2 = people.sort( ); // will NOT  work, because people is object array. If people array was just numbers , then we don't need to pass the call back function 
+  console.log("2 Sorted People by Age: ", sortedPeople2);
+
 
 </script>
