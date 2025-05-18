@@ -45,13 +45,13 @@
 
 
         fly() {
-            console.log(` Flying the ${this.name} car...`)
+            console.log(` Flying the ${this.name} car...`);
         }
 
         // override displayDetails() so that we can also print the maxHeight the car can fly       
         displayDetails() {
             //console.log(` Details of the car: name  = ${this.name} ,  model year = ${this.modelyear} `);
-            super.displayDetails();
+            super.displayDetails(); // do this instead of copy-paste in prev line, because we want to maximize re-use of whatever we have in parent class.
             console.log(` maxHeight(fly)  = ${this.maxHeight} `);
         }
 
