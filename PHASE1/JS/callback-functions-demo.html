@@ -1,0 +1,68 @@
+<script>
+
+    function add(a, b) {
+
+        return a + b;
+
+    }
+
+    function subtract(a, b) {
+
+        return a - b;
+
+    }
+
+
+    // given x and y, we want to compute x square - y square
+    function aSquareMinusBSquare(x, y, f1, f2) {
+
+        return f1(x, y) * f2(x, y);
+    };
+
+
+    let p = 5, q = 3;
+    let result = aSquareMinusBSquare(p, q, add, subtract);
+    console.log(` ${result} `);
+
+
+
+</script>
+
+<script>
+
+    function greetInEnglish(name) {
+        console.log("Hi " + name);
+    }
+
+    function greetInFrench(name) {
+        console.log("Bonjour " + name);
+    }
+
+    function greetInSpanish(name) {
+        console.log(" In Spanish I am greeting you " + name);
+    }
+
+
+    function greet(f1, f2) {
+        let loc = document.getElementById("locationInput").value;
+        let user = document.getElementById("nameInput").value;
+
+        if (loc === "ENGLAND")
+            f1(user);
+        else if (loc === "FRANCE")
+            f2(user);
+    }
+</script>
+
+<form >
+    What's your name <input id="nameInput"> <br><br>
+    Where are you from ? <input id="locationInput"> <br><br>
+
+    <button onclick="greet(greetInEnglish,greetInSpanish); return false"> Submit </button>
+
+</form>
+
+
+
+
+<
