@@ -1,0 +1,76 @@
+<script>
+    class Car {
+        // properties of the car class
+        constructor(n, y) {
+            this.name = n;
+            this.modelyear = y;
+        }
+
+        // Behaviours of the Car class
+        drive(speed) {
+            console.log(" Driving the car " + this.name + " with speed = " + speed + " miles/hr.");
+        }
+
+        park() {
+            console.log(" Parking the car...")
+        }
+
+        displayDetails() {
+            console.log(` Details of the car: name  = ${this.name} ,  model year = ${this.modelyear} `);
+        }
+
+
+    }
+
+    let car1 = new Car("Toyota", 1995);
+    let car2 = new Car("Ford", 2009);
+
+    console.log("Car no 1 's name " + car1.name + " and its model is " + car1.modelyear);
+    console.log("Car no 2 's name " + car2.name);
+
+    car1.drive(100);
+    car2.drive(150);
+</script>
+
+<!-- Client wants us to model the Flying Car that's new to the market. Client has told that the FlyingCar is an enhancement of the existing
+ Car that's already in the market. -->
+<script>
+    class FlyingCar extends Car {
+
+        constructor(n, y, h) {
+            super(n, y);
+            this.maxHeight = h;
+        }
+
+
+
+        fly() {
+            console.log(` Flying the ${this.name} car...`)
+        }
+
+        // override displayDetails() so that we can also print the maxHeight the car can fly       
+        displayDetails() {
+            //console.log(` Details of the car: name  = ${this.name} ,  model year = ${this.modelyear} `);
+            super.displayDetails();
+            console.log(` maxHeight(fly)  = ${this.maxHeight} `);
+        }
+
+
+    }
+
+    // create some flying cars.
+    let flyingCar1 = new FlyingCar("AirFrance", 2000, 100);
+
+    console.log(`Flying Car no 1 's name ${flyingCar1.name} and its model is ${flyingCar1.modelyear}`);
+    flyingCar1.drive(1000);
+
+    flyingCar1.displayDetails(); // PRINTS "AirFrance", 2000, 100
+
+
+    let flyingCar2 = new FlyingCar("AirLondon", 2000, 100);
+
+    console.log(`Flying Car no 1 's name ${flyingCar2.name} and its model is ${flyingCar2.modelyear} with a vertical takeoff capacity of ${flyingCar2.maxHeight}  `);
+    flyingCar2.drive(1000);
+    flyingCar2.fly();
+
+</script>
