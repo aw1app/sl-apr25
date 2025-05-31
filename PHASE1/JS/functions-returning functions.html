@@ -1,0 +1,23 @@
+<script>
+
+    function OTP(){
+        let x=1023;
+
+        f1 = () =>  { console.log("Hello from f1");  x=Math.random() ; return x;}
+
+        return f1;
+
+    }
+
+
+   let result = OTP(); // returns something that is a function (f1) and we can therefore store in some variable like result;
+
+   // since result has stored a function, we can invoke it.
+   let f1Result = result(); // 11  - because when we invoke result, it's actually like we have invoked f1, and f1 returns x++.
+   console.log(f1Result); // 1023
+
+
+   let f1Result2 = result(); // 1024 or 12 or undefined?  12
+   console.log(f1Result2);  // 12
+
+</script>
