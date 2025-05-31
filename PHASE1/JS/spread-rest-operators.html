@@ -39,8 +39,8 @@
 console.log("\n\n Spread operator demo" )
 
 let  studentsGroup1 = [
-new Student("ram", 28, 5.9),
-new Student("sam", 19, 5.5)
+new Student("Moses", 28, 5.9),
+new Student("Prerna", 19, 5.5)
 ];
 
 
@@ -49,8 +49,8 @@ new Student("Prema", 28, 5.9),
 new Student("Palani", 19, 5.5)
 ];
 
-let studentsInAllgroups = [...studentsGroup1, ...studentsGroup2];
+let studentsInAllgroups = [...studentsGroup1, A, B, ...studentsGroup2]; // very very compact way of concatanating arrays!! using ... spread operator
 console.log("\n\n studentsInAllgroups : " )
-studentsInAllgroups.forEach( c => console.log(c.name));
+studentsInAllgroups.forEach( c => console.log(c.name)); // 6 students
 
 </script>
