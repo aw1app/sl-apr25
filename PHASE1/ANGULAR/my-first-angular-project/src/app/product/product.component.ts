@@ -10,5 +10,6 @@ export class ProductComponent {
 
   name:string = "Samsung Mobile";
   price:number = 1000;
+  discount:
 
 }
