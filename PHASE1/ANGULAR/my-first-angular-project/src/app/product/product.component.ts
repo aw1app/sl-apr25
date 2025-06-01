@@ -12,10 +12,14 @@ export class ProductComponent {
   product!: Product;
 
   constructor() {
-    this.product = new Product(1, "Samsung Mobile", 2000.5, 
-      'This is a great product with awesome features.',
-      true,
-      'https://via.placeholder.com/300x200.png?text=Product+Image');
+    this.product =new Product(1, "Motorola Zing", 12000.55, 'This is a elite mobile with awesome features.', true,
+      'images/motorola.PNG');
+  }
+
+   f1 = ():void => {
+
+    let x=10;
+
   }
 
 }
