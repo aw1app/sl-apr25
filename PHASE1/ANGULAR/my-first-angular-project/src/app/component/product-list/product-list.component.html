@@ -1,0 +1,27 @@
+
+<H2>List of Product at Amzn today</H2>
+
+<!-- <ul *ngFor="let prod of products">
+    <li>{{prod.name}},{{prod.price}}</li>
+</ul> -->
+
+
+<table border="1">
+    <thead>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Picture</th>
+        
+    </thead>
+
+    <tr *ngFor="let prod of products">
+        <td  >{{prod.name}}</td>
+        <td  >{{prod.price}}</td>
+        <td  >{{prod.description}}</td>
+        <td><img src="{{prod.imagePath}}" width="100" height="50"></td>
+        
+    </tr>
+
+</table>
+

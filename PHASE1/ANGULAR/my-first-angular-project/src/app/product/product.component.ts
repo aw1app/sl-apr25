@@ -9,10 +9,13 @@ import { Product } from '../model/product';
 })
 export class ProductComponent {
 
-  prod!:Product;
+  product!: Product;
 
-  constructor(){
-    this.prod = new Product(1,"Samsung Mobile",2000.5);
+  constructor() {
+    this.product = new Product(1, "Samsung Mobile", 2000.5, 
+      'This is a great product with awesome features.',
+      true,
+      'https://via.placeholder.com/300x200.png?text=Product+Image');
   }
 
 }
