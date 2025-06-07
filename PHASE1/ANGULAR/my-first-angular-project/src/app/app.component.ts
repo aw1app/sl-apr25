@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ProductComponent } from './product/product.component';
+import { ProductComponent } from './component/product/product.component';
 import { ProductListComponent } from './component/product-list/product-list.component';
 
 @Component({
