@@ -17,8 +17,7 @@ export class ProductComponent {
   @Input() imagePath!: string;
 
   constructor() {
-    this.product =new Product(1, this.name, 12000.55, 'This is a elite mobile with awesome features.', true,
-      'images/motorola.PNG');
+    this.product =new Product(1);
   }
 
   ngOnInit():void{
