@@ -11,7 +11,7 @@ export class ProductComponent {
 
   product!: Product;
   @Input() name!: string;
-  @Input() price!: string;
+  @Input() price!: number;
   @Input() description!: string;
   @Input() inStock!: boolean;
   @Input() imagePath!: string;
@@ -23,7 +23,9 @@ export class ProductComponent {
 
   ngOnInit():void{
     this.product.name = this.name;
+    this.product.price = this.price;
     this.product.description = this.description;
+    this.product.inStock = this.inStock;
   }
 
    f1 = ():void => {
