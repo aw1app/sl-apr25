@@ -10,6 +10,10 @@
         {{ product.inStock ? 'In Stock' : 'Out of Stock' }}
       </p>
       <button (click)="f1()">Click me to call f1()</button>
+      <button (click)="increasePrice()">INCREASE PRICE </button>
+      <br><br>
+      <button (click)="generateMyEvent(150)">CLICK ME TO generate a myEvent event with 150 as data</button>
+      <button (click)="generateMyEvent(255)">CLICK ME TO generate a myEvent event with 250 as data</button>
     </div>
   </div>
   

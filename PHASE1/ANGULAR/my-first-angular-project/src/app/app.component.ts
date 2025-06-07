@@ -14,5 +14,11 @@ export class AppComponent {
 
   x=10;
 
+
+  parentFunc=(childEventObj:any):void =>{
+    console.log(`Oh ok, some child with name ${childEventObj.name} emitted an myEvent`);
+    console.log("The data that child gave is " + childEventObj.data);
+  }
+
   f1 = () => console.log("Hi")
 }
