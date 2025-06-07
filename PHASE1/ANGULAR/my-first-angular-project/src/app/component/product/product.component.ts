@@ -28,9 +28,7 @@ export class ProductComponent {
   }
 
    f1 = ():void => {
-
-    let x=10;
-
+   console.log(`f1 was invoked.. on ${this.product.name} product`);
   }
 
 }
