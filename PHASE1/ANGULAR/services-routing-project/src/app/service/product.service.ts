@@ -12,16 +12,16 @@ export class ProductService {
 
     this.products = [
 
-      new Product(0, "Samsung Mobile", 2000.5, 'This is a great mobile with awesome features.', true,
-        'https://via.placeholder.com/300x200.png?text=Product+Image'),
+      new Product(0, "HP Mouse", 205, 'This is a great mouse with awesome features.', true,
+        'images/HPMouse.JPG'),
 
-      new Product(1, "Nokia 3233", 2400.5, 'This is a great value mobile with awesome features.', true,
-        'https://via.placeholder.com/300x200.png?text=Product+Image'),
+      new Product(1, "Dell Laptop", 24000.5, 'This is a great value Laptop with awesome features.', false,
+        'images/dell.JPG'),
 
-      new Product(2, "Samsung Flip", 2700.5, 'This is a great mobile with flip features.', true,
-        'https://via.placeholder.com/300x200.png?text=Product+Image'),
+      new Product(2, "IPhone", 27000.5, 'This is a great mobile with flip features.', true,
+        'images/Apple-Phone.JPG'),
 
-      new Product(3, "Motorola Zing", 12000.55, 'This is a elite mobile with awesome features.', true,
+      new Product(3, "Motorola Zing", 1200.55, 'This is a elite mobile with awesome features.', true,
         'images/motorola.PNG')
     ]
 
