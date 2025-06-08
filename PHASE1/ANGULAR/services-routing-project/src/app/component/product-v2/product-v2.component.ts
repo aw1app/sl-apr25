@@ -26,6 +26,8 @@ export class ProductV2Component {
       error => { console.error(" error fetching the product ...") }
 
     );
+
+  
   }
 
 }
