@@ -1,8 +1,16 @@
 <h1 style="text-align:center">Welcome to Amazon.com</h1>
-This is app component
+This is from App component. Everything below is from router-outlet.
 
 <br><br>
 
+<ul class="horizontal-nav">
+    <li><a [routerLink]="['/add-product']">Add New Product</a></li>
+    <li><a [routerLink]="['/product','1']">Product 1</a></li>
+    <li><a [routerLink]="['/product','2']">Product 2</a></li>
+    <li><a [routerLink]="['/pipes-demo']">Pipes Demo</a></li>
+</ul>
+
+<router-outlet></router-outlet>
 
 <!-- <addproduct></addproduct>
 
@@ -17,12 +25,3 @@ This is app component
 <product [id]="2" ></product>
 <product [id]="3" ></product>
 <product [id]="4" ></product> -->
-
-<ul class="horizontal-nav">
-<li><a [routerLink]="['/add-product']">Add New Product</a></li>
-<li><a [routerLink]="['/product','1']">Product 1</a></li>
-<li><a [routerLink]="['/product','2']">Product 2</a></li>
-</ul>
-
-<router-outlet></router-outlet>
-
