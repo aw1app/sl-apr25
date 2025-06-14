@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-pipe-demo',
   imports: [CommonModule],
+  standalone:true,
   templateUrl: './pipe-demo.component.html',
   styleUrl: './pipe-demo.component.css'
 })
@@ -32,6 +33,12 @@ export class PipeDemoComponent {
   }
 
   ngOnInit():void {
+    console.log("INSIDE PipeDemoComponent ngOnInit.")
+    this.asyncProducts=this.productService.getAllProducts();
+  }
+
+  ngOnChanges():void {
+    console.log("INSIDE PipeDemoComponent ngOnChanges.");
     this.asyncProducts=this.productService.getAllProducts();
   }
 

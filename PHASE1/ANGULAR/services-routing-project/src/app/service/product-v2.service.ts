@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Product } from '../model/product';
-import { Observable } from 'rxjs/internal/Observable';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { ProductV2 } from '../model/product-v2';
 
 @Injectable({
@@ -9,44 +8,46 @@ import { ProductV2 } from '../model/product-v2';
 })
 export class ProductV2Service {
 
-  serverUrl: string = "https://dummyjson.com/products";
-  httpClient!: HttpClient;
+  private serverUrl: string = "http://localhost:3000/products";
 
-  products:ProductV2[] = []; 
+  private productsSubject = new BehaviorSubject<ProductV2[]>([]);
+  products$ = this.productsSubject.asObservable(); // exposed observable
 
-  constructor(httpClient: HttpClient) {
-    this.httpClient = httpClient;
-
-    this.getAllProducts().subscribe(  response => { this.products = response.products }, error => { console.log(error)}  );
+  constructor(private httpClient: HttpClient) {
+    // Initial load of products
+    this.loadProducts();
   }
 
-  //CRUD Ops
-  // List all products.
+  // Load all products and update the subject
+  loadProducts(): void {
+    this.getAllProducts().subscribe(
+      response => this.productsSubject.next(response),
+      error => console.error('Error loading products:', error)
+    );
+  }
 
-  getAllProducts = (): Observable<any> => {
+  // Get all products (returns Observable)
+  getAllProducts(): Observable<ProductV2[]> {
     return this.httpClient.get<ProductV2[]>(this.serverUrl);
   }
 
-  // fetching a single product
-  getProduct = (id: number): Observable<ProductV2> => {   
+  // Fetch a single product
+  getProduct(id: number): Observable<ProductV2> {
     return this.httpClient.get<ProductV2>(`${this.serverUrl}/${id}`);
   }
 
-  // adding a product
-  addProduct = (prod:ProductV2):void => {
-    
-    this.products.push(prod);
-
-    console.log("INSIDE ProductV2Service addProduct. Successfully created product! ");
-    console.log("INSIDE ProductV2Service addProduct. this.products.length = " +this.products.length );
+  // Add a new product
+  addProduct(prod: ProductV2): void {
+    this.httpClient.post<ProductV2>(this.serverUrl, prod).subscribe(() => {
+      this.loadProducts(); // Refresh list after adding
+    });
   }
 
-  deleteProduct = (id:number):void => {
-    this.products = this.products.filter( item  => item.id != id);
-    console.log("INSIDE ProductV2Service deleteProduct. Successfully deleted product! ");
-    console.log("INSIDE ProductV2Service deleteProduct. this.products.length = " +this.products.length );
+  // Delete a product
+  deleteProduct(id: number): void {
+    this.httpClient.delete(`${this.serverUrl}/${id}`).subscribe(() => {
+      this.loadProducts(); // Refresh list after deletion
+    });
   }
-
-
 
 }
