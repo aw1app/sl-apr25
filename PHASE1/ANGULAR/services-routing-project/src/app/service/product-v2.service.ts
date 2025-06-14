@@ -41,6 +41,10 @@ export class ProductV2Service {
     console.log("INSIDE ProductV2Service addProduct. this.products.length = " +this.products.length );
   }
 
-  
+  deleteProduct = (id:number):void => {
+
+  }
+
+
 
 }
