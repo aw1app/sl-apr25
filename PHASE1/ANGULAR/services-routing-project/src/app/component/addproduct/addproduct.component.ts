@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ProductV2 } from '../../model/product-v2';
 import { Product } from '../../model/product';
+import { ProductV2Service } from '../../service/product-v2.service';
 
 @Component({
   selector: 'addproduct',
@@ -12,9 +13,11 @@ import { Product } from '../../model/product';
 })
 export class AddproductComponent {
 
-  productForm!: FormGroup;  
+  productForm!: FormGroup; 
+  productV2Service!: ProductV2Service; 
 
-  constructor( private fb: FormBuilder){
+  constructor( private fb: FormBuilder, productService: ProductV2Service){
+    this.productV2Service = productService;
 
     this.productForm = this.fb.group(
 
@@ -32,9 +35,11 @@ export class AddproductComponent {
     let name = this.productForm.get('productName')?.value;
     let price = this.productForm.get('productPrice')?.value;
 
-    let tempProduct = new Product(1, name, price, '', true, 'images/444.png');
+    let tempProduct = new ProductV2(1, name, price, 'some desc');
 
     console.log("Successfully created product! ");
+
+    this.productV2Service.addProduct(tempProduct);
 
   }
 
