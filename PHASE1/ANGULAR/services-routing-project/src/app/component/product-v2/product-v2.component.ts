@@ -25,9 +25,11 @@ export class ProductV2Component {
       response => { this.product = response },
       error => { console.error(" error fetching the product ...") }
 
-    );
+    );  
+  }
 
-  
+  delete = (id:number):void =>  {
+    this.productV2Service.delete(id);
   }
 
 }
