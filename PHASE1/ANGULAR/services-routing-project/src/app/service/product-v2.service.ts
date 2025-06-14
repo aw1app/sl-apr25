@@ -42,7 +42,9 @@ export class ProductV2Service {
   }
 
   deleteProduct = (id:number):void => {
-
+    this.products = this.products.filter( item  => item.id != id);
+    console.log("INSIDE ProductV2Service deleteProduct. Successfully deleted product! ");
+    console.log("INSIDE ProductV2Service deleteProduct. this.products.length = " +this.products.length );
   }
 
 
