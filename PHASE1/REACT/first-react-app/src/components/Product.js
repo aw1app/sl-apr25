@@ -29,7 +29,7 @@ class Product extends Component {
                 <li> Name : {nameInCaps}</li>
                 <li> Country of Origin : {this.state.countryOfOrgin}</li>
                 <li> Export Limit: {this.state.exportLimit}</li>
-                <li> Export Limit calculation: {this.state.exportLimit > 100 ? 'LIMIT EXCEEDED' : 'LIMIT ALLOWED' }</li>
+                <li> Export Allowed : {this.state.exportLimit > 100 ? 'LIMIT EXCEEDED' : 'LIMIT ALLOWED' }</li>
             </div>
         );
     }
