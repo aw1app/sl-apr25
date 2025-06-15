@@ -907,12 +907,6 @@
       "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/honey-jar/thumbnail.webp"
     },
     {
-      "id": "1",
-      "title": "sss",
-      "price": "1212",
-      "description": "some desc"
-    },
-    {
       "id": 1,
       "title": "HP Monitor",
       "price": "1234.5",
