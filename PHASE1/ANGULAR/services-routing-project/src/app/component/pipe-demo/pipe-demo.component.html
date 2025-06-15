@@ -1,4 +1,16 @@
 <div class="pipe-demo">
+  <h2>Product List (Using AsyncPipe)</h2>
+
+  <div *ngIf="asyncProducts | async as products; else loading">
+      <ul>
+        <li *ngFor="let product of products">{{ product.title }} <button (click)="delete(product.id)">DELETE</button></li>
+      </ul>
+    </div>
+
+    <ng-template #loading>
+      <p>Loading products...</p>
+    </ng-template>
+
     <h1>{{ title }}</h1>
   
     <h3>Built-in Pipes</h3>
@@ -20,17 +32,7 @@
     <p><strong>Slice (First 10 Characters of {{ longText }} ):</strong> {{ longText | slice:0:10 }}...</p>
     <p><strong>JSON:</strong> {{ jsonData | json }}</p>
 
-    <h2>Product List (Using AsyncPipe)</h2>
-
-    <div *ngIf="asyncProducts | async as products; else loading">
-        <ul>
-          <li *ngFor="let product of products">{{ product.title }}</li>
-        </ul>
-      </div>
-
-      <ng-template #loading>
-        <p>Loading products...</p>
-      </ng-template>
+    
       
 <br><br>
 </div>

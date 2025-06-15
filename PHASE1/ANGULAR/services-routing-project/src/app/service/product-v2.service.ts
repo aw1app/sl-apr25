@@ -11,7 +11,11 @@ export class ProductV2Service {
   private serverUrl: string = "http://localhost:3000/products";
 
   private productsSubject = new BehaviorSubject<ProductV2[]>([]);
-  products$ = this.productsSubject.asObservable(); // exposed observable
+  products$ = this.productsSubject.asObservable(); // products$ now is actually of type Observable<ProductV2[]>
+
+
+
+  //products!=ProductV2[];
 
   constructor(private httpClient: HttpClient) {
     // Initial load of products
@@ -38,7 +42,8 @@ export class ProductV2Service {
 
   // Add a new product
   addProduct(prod: ProductV2): void {
-    this.httpClient.post<ProductV2>(this.serverUrl, prod).subscribe(() => {
+    this.httpClient.post<ProductV2>(this.serverUrl, prod).subscribe(
+      () => {
       this.loadProducts(); // Refresh list after adding
     });
   }

@@ -3,6 +3,7 @@ import { ProductV2 } from '../../model/product-v2';
 import { Observable } from 'rxjs/internal/Observable';
 import { ProductV2Service } from '../../service/product-v2.service';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-pipe-demo',
@@ -27,9 +28,11 @@ export class PipeDemoComponent {
   asyncProducts!: Observable<ProductV2[]>;
 
   productService!:ProductV2Service;
+  router!: Router;
 
-  constructor(productService:ProductV2Service){
+  constructor(productService:ProductV2Service, router: Router){
     this.productService = productService;
+    this.router = router;
   }
 
   ngOnInit():void {
@@ -42,6 +45,11 @@ export class PipeDemoComponent {
     this.asyncProducts=this.productService.getAllProducts();
   }
 
-
+  delete = (id: number): void => {
+    this.productService.deleteProduct(id);
+    // after delete fetch the list of product afresh
+    // this.asyncProducts=this.productService.getAllProducts();
+    // this.router.navigate(['pipes-demo']);
+  }
 
 }
