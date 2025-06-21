@@ -1,11 +1,14 @@
 import './App.css';
 import Hello from './components/demoes/Hello';
 import Product from './components/Product';
+import Timer from './components/Timer';
 
 function App() {
 
   return (
     <div >
+
+    <Timer />
      
     <h1>Welcome to Amazon.com</h1>
     <Hello name="Joe" age="23" />
