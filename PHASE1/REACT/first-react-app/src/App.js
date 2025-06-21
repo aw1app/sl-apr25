@@ -3,11 +3,14 @@ import Hello from './components/demoes/Hello';
 import Product from './components/Product';
 import Timer from './components/Timer';
 import ProductF from './function-components/ProductF';
+import ProductListF from './function-components/ProductListF';
 import User from './function-components/User';
 
 function App() {
 
   let var1=950;
+
+  const parentFunc1=(data)=>{ console.log('INSIDE parentFunc1' +data);}
 
   return (
     <div >
@@ -26,8 +29,9 @@ function App() {
 
 
     <hr/>
-    <ProductF name="Functional Fruit Juice"  exportLimit="75" />
+    <ProductF name="Functional Fruit Juice"  exportLimit="75"  func1={parentFunc1} />
 
+    <ProductListF />
    
 
     </div>
