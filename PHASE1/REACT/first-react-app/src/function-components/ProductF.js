@@ -15,3 +15,6 @@ function ProductF(props) {
 }
 
 export default ProductF;
+
+
+// Task: Create an UserProfile functional comp

@@ -6,6 +6,8 @@ import ProductF from './function-components/ProductF';
 
 function App() {
 
+  let var1=950;
+
   return (
     <div >
 
@@ -16,7 +18,7 @@ function App() {
     <Hello name="Priya" age="44"/>
 
     <Product name="Milk product" exportLimit="1000" />
-    <Product name="Fruit Juice"  exportLimit="95" />
+    <Product name="Fruit Juice"  exportLimit={var1} />
 
 
     <hr/>
