@@ -2,6 +2,7 @@ import './App.css';
 import Hello from './components/demoes/Hello';
 import Product from './components/Product';
 import Timer from './components/Timer';
+import ProductF from './function-components/ProductF';
 
 function App() {
 
@@ -16,6 +17,10 @@ function App() {
 
     <Product name="Milk product" exportLimit="1000" />
     <Product name="Fruit Juice"  exportLimit="95" />
+
+
+    <hr/>
+    <ProductF name="Functional Fruit Juice"  exportLimit="75" />
 
     </div>
   );

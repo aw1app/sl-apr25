@@ -36,7 +36,7 @@ class Timer extends Component {
 
 
     componentWillUnmount() {
-        console.log("INSIDE componentWillUnmount", nextState);
+        console.log("INSIDE componentWillUnmount");
         clearInterval(this.intervalId);
     }
 
