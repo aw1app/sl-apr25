@@ -12,13 +12,14 @@ function App() {
   return (
     <div >
 
-    <Timer />
+   
      
     <h1>Welcome to Amazon.com</h1>
     <User name="Manohar" email="aaa@bbb.com" />
 
+    {/* <Timer />
     <Hello name="Joe" age="23" />
-    <Hello name="Priya" age="44"/>
+    <Hello name="Priya" age="44"/> */}
 
     <Product name="Milk product" exportLimit="1000" />
     <Product name="Fruit Juice"  exportLimit={var1} />
