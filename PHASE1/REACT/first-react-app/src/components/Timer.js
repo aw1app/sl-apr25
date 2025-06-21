@@ -26,16 +26,17 @@ class Timer extends Component {
             }, 1000);
     }
 
-    shouldComponentUpdate(nextProps,  nextState) {
-        console.log("INSIDE shouldComponentUpdate");
-        if(this.state.seconds < this.state.maxSeconds)
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log("INSIDE shouldComponentUpdate", nextState);
+        if (nextState.seconds < this.state.maxSeconds)
             return true;
         else
-        return false;
+            return false;
     }
 
 
     componentWillUnmount() {
+        console.log("INSIDE componentWillUnmount", nextState);
         clearInterval(this.intervalId);
     }
 
