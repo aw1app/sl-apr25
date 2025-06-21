@@ -18,7 +18,7 @@ let products= [
         "imagePath": "images/222.png"
     },
     {
-        "id": 0,
+        "id": 2,
         "name": "Nokia 2000",
         "price": "10000",
         "description": "",
@@ -45,8 +45,10 @@ const ProductListF = (props) => {
 
             <table border="1">
                 <tr><th>NAME</th><th>PRICE</th></tr>
-             { products &&  products.map ( product => <tr><td> {product.name} </td> <td> {product.price} </td> </tr>) }
+             { products &&  products.map ( prod => <tr><td> {prod.name} </td> <td> {prod.price} </td> </tr>) }
             </table>
+
+            { products &&  products.map ( prod => <li key={prod.id}> {prod.name} </li> ) }
 
           <br></br> 
 
