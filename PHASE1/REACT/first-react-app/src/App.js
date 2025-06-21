@@ -3,6 +3,7 @@ import Hello from './components/demoes/Hello';
 import Product from './components/Product';
 import Timer from './components/Timer';
 import ProductF from './function-components/ProductF';
+import User from './function-components/User';
 
 function App() {
 
@@ -14,6 +15,8 @@ function App() {
     <Timer />
      
     <h1>Welcome to Amazon.com</h1>
+    <User name="Manohar" email="aaa@bbb.com" />
+
     <Hello name="Joe" age="23" />
     <Hello name="Priya" age="44"/>
 
@@ -23,6 +26,8 @@ function App() {
 
     <hr/>
     <ProductF name="Functional Fruit Juice"  exportLimit="75" />
+
+   
 
     </div>
   );
