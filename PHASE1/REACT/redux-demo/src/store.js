@@ -57,7 +57,6 @@ const productsSlice = createSlice(
           state.status = 'failed';
           state.error = action.error.message;
         });
-
     },
 
   }
@@ -69,6 +68,7 @@ const productsSlice = createSlice(
 const store = configureStore({
   reducer: {
     counter: counterSlice.reducer,
+    products: productsSlice.reducer
   },
 });
 
