@@ -17,6 +17,7 @@ const ProductList = (props) => {
                 .then(jsonData => setProducts(jsonData))
                 .catch(err => console.log(' something thing went wrong ' + err));
         },
+        
         [x0, x1]
 
     );
