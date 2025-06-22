@@ -33,6 +33,20 @@ export const fetchProducts = createAsyncThunk('products/fetchProducts', async ()
 }
 );
 
+
+// Add product
+export const addProduct = createAsyncThunk('products/addProduct', async (newProduct) => {
+
+  const res = await fetch('http://localhost:5000/products', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(newProduct),
+  });
+
+  const data = await res.json();
+  return data;
+});
+
 const productsSlice = createSlice(
   {
 
@@ -56,6 +70,9 @@ const productsSlice = createSlice(
         .addCase(fetchProducts.rejected, (state, action) => {
           state.status = 'failed';
           state.error = action.error.message;
+        })
+        .addCase(addProduct.fulfilled, (state, action) => {
+          state.items.push(action.payload);
         });
     },
 

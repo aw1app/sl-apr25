@@ -8,17 +8,12 @@ const ProductListRedux = (props) => {
 
 
     useEffect(
-
         () => {
 
-            if (status === 'idle') {
-                dispatch(fetchProducts());
-            }
+            if (status === 'idle') {    dispatch(fetchProducts());  }
 
         },
-
         [status]
-
     );
 
 
@@ -31,10 +26,13 @@ const ProductListRedux = (props) => {
     }
 
 
-
     return (
 
         <div style={{ border: "solid 1px", "border-color": 'red' }} >
+
+
+            
+
             <h3> ProductListRedux info (Functional component):</h3>
 
             <table border="1">
@@ -43,8 +41,6 @@ const ProductListRedux = (props) => {
             </table>
 
             <br></br>
-
-
         </div>
     );
 
