@@ -38,9 +38,11 @@ function ProductForm() {
     return (
 
         <form onSubmit={handleSubmit} style={{ marginBottom: '20px' }}>
+            <br></br><br></br>
+            <h2>ADD a New Product </h2>
 
-            <input name="name" value={product.name} onChange={handleChange} required />
-            <input name="price" value={product.price} onChange={handleChange} required />
+            Name: <input name="name" value={product.name} onChange={handleChange} required /> <br /><br />
+            Price: <input name="price" value={product.price} onChange={handleChange} required /><br /><br />
 
             <button type="submit">ADD PRODUCT</button>
 
