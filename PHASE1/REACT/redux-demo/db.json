@@ -31,6 +31,14 @@
       "inStock": true,
       "imagePath": "",
       "id": "NjaKRA0"
+    },
+    {
+      "id": "a8bf",
+      "name": "HP Mouse 2025",
+      "price": "100",
+      "description": "",
+      "inStock": true,
+      "imagePath": ""
     }
   ]
 }
