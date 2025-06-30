@@ -47,6 +47,9 @@ export const addProduct = createAsyncThunk('products/addProduct', async (newProd
   return data;
 });
 
+
+// Single product
+
 const productsSlice = createSlice(
   {
 
