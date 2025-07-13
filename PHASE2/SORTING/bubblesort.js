@@ -2,9 +2,9 @@
 function bubbleSort(array) {
     let n = array.length;
 
-    for (let i = 0; i < n - 1; i++) {
+    for (let i = 0; i < n - 1; i++) { // i is iteration number
 
-        for (let j = 0; j < n - 1 - i; j++) {
+        for (let j = 0; j < n - 1 - i; j++) { 
 
              if (array[j] > array[j+1])
                  [array[j], array[j + 1]] = [array[j + 1], array[j]];
