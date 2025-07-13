@@ -10,12 +10,16 @@ matrixB = [
 
 function matrixAddition(matrixA, matrixB) {
     const result = [];
+    
+    let noOfRows = matrixA.length;
+    let noOfCols = matrixA[0].length;
 
-    for (let i = 0; i < matrixA.length; i++) {
+
+    for (let i = 0; i < noOfRows; i++) {
         
         result.push([]);
         
-        for (let j = 0; j < matrixA[i].length; j++) {
+        for (let j = 0; j < noOfCols ; j++) {
             result[i][j] = matrixA[i][j] + matrixB[i][j];
         };
 	}
