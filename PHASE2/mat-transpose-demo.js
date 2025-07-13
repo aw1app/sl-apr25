@@ -2,13 +2,9 @@ matrixA = [
     [1, 2],
     [3, 4]
 ];
-matrixB = [
-    [5, 6],
-    [7, 8]
-];
 
 
-function matrixAddition(matrixA, matrixB) {
+function matrixTranspose(matrixA) {
     const result = [];
     
     let noOfRows = matrixA.length;
@@ -20,12 +16,12 @@ function matrixAddition(matrixA, matrixB) {
         result.push([]); // create an empty row.
         
         for (let j = 0; j < noOfCols ; j++) {
-            result[i][j] = matrixA[i][j] + matrixB[i][j];
+            result[i][j] = matrixA[j][i]
         };
 	}
     return result;
 };
 
 
-matricC = matrixAddition(matrixA,matrixB);
+matricC = matrixTranspose(matrixA,matrixB);
 console.log(matricC)
