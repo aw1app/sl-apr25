@@ -15,15 +15,14 @@ function matrixMultiplication(matrixA, matrixB) {
     let noOfCols = matrixB[0].length; // no of cols in B
 
 
-    for (let i = 0; i < noOfRows; i++) {
+    for (let i = 0; i < noOfRows; i++) { // for each row
 
         result.push([]);
-
-
-        for (let j = 0; j < noOfCols; j++) {
+ 
+        for (let j = 0; j < noOfCols; j++) { // for every col
             let sum = 0;
 
-            for (let k = 0; k < matrixA[0].length; k++) {
+            for (let k = 0; k < matrixA[0].length; k++) { // matrixA[0].length = matrixB.length 
                 sum = sum + matrixA[i][k] * matrixB[k][j];
             };           
             result[i][j] = sum;
