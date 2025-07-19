@@ -36,8 +36,10 @@ function merge(leftArray, rightArray) {
         };
     };
 
-    // if there are any remaining elements in either of the array
-    return mergedArray.concat(leftArray.slice(leftIndex)).concat(rightArray.slice(rightIndex));
+    // if there are any remaining elements in either of the array, just add them
+    return mergedArray
+    .concat(leftArray.slice(leftIndex))
+    .concat(rightArray.slice(rightIndex));
 
 }
 
