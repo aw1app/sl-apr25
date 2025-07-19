@@ -18,11 +18,11 @@ function partition(array, low, high) {
 
         if (array[j] < pivot) {
             i++;
-            [array[i], array[j]] = [array[j], array[i]]; // Swap elements 
+            [ array[i], array[j] ] = [ array[j], array[i] ]; // Swap elements 
         }
     }
 
-    [array[i + 1], array[high]] = [array[high], array[i + 1]]; // One last swap  
+    [ array[i + 1], array[high] ] = [ array[high], array[i + 1] ]; // One last swap  
     return i + 1;// return the pivot index
 }
 
