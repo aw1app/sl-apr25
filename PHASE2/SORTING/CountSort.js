@@ -12,6 +12,7 @@ function countingSort(arr) {
         count[num] += 1;
     }
 
+    //Build the result (sorted) array
     for (let i = 0; i < count.length; i++) {
 
         while (count[i] > 0) {
