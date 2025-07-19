@@ -48,5 +48,4 @@ console.log('MERGE SORT Demo');
 console.log('Given array : ', test_array);
 
 let mergedArray = mergeSort(test_array);
-//after bubble, the array has been transformed in-place.
 console.log('Sorted array : ', mergedArray);
