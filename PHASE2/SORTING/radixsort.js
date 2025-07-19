@@ -8,12 +8,17 @@ function radixSort(arr) {
 
     let exp = 1;
 
+  
+
     while (Math.floor(maxVal / exp) > 0) {
+
+         // console.log("DEBUG Math.floor(maxVal / exp)" , Math.floor(maxVal / exp));
+         // above check for Math.floor(maxVal / exp) is what controls number of iterations.
 
         // Distribute numbers to buckets
         for (let i = result.length - 1; i >= 0; i--) {
             const val = result[i];
-            const radixIndex = Math.floor((val / exp) % 10); //
+            const radixIndex = Math.floor((val / exp) % 10); // radixIndex is the bucket number.
             radixArray[radixIndex].push(val);
         };
 
@@ -29,10 +34,10 @@ function radixSort(arr) {
             }
         }
 
-        exp = exp *10;
+        exp = exp * 10;
     }
 
-     return result;
+    return result;
 };
 
 console.log("RADIX SORT Demo:");
