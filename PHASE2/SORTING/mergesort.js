@@ -4,7 +4,6 @@ function mergeSort(array) {
     if (array.length <= 1)
         return array
 
-
     const middleIndex = Math.floor(array.length / 2);
 
     // Divide the array into two halves 
@@ -35,15 +34,15 @@ function merge(leftArray, rightArray) {
             mergedArray.push(rightArray[rightIndex]);
             rightIndex++;
         };
+    };
 
-         // if there are any remaining elements in either of the array
-         return mergedArray.concat(leftArray.slice(leftIndex)).concat(rightArray.slice(rightIndex));
-    }
+    // if there are any remaining elements in either of the array
+    return mergedArray.concat(leftArray.slice(leftIndex)).concat(rightArray.slice(rightIndex));
 
 }
 
 
-test_array =[5,1,4,2,8,16,9];
+let test_array = [5, 1, 4, 2, 8, 16, 9];
 
 console.log('MERGE SORT Demo');
 console.log('Given array : ', test_array);
