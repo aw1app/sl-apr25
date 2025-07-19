@@ -8,20 +8,19 @@ function countingSort(arr) {
     const count = new Array(maxVal + 1).fill(0);
 
     // Build the frequency array 
-    for (num of arr){
-        count[num]+=1;
+    for (num of arr) {
+        count[num] += 1;
     }
 
-     for (let i = 0; i < count.length; i++) {
-       
-         while (count[i] > 0) {
+    for (let i = 0; i < count.length; i++) {
+
+        while (count[i] > 0) {
             result.push(i);
-            count[i]-=1;
-         }
-     }
+            count[i] -= 1;
+        }
+    }
 
-     return result;
-
+    return result;
 }
 
 
