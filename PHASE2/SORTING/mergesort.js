@@ -47,5 +47,5 @@ let test_array = [5, 1, 4, 2, 8, 16, 9];
 console.log('MERGE SORT Demo');
 console.log('Given array : ', test_array);
 
-let mergedArray = mergeSort(test_array);
-console.log('Sorted array : ', mergedArray);
+let sortedArray = mergeSort(test_array);
+console.log('Sorted array : ', sortedArray);
