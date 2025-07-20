@@ -35,3 +35,11 @@ console.log("Binary Search demo for ", arr);
 binarySearch(arr, 10);
 binarySearch(arr, 3);
 binarySearch(arr, -1);
+
+
+// use binary search on a unsorted array.
+console.log("\n binary search on a unsorted array demo");
+const arr1 = [11, 3, 5, 28, 9];
+
+import {heapSort} from '../SORTING/heapSort-Ujjwal.js'
+binarySearch (heapSort(arr1), 28 );

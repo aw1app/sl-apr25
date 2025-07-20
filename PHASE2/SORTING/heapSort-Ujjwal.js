@@ -1,4 +1,4 @@
-function heapSort(arr) {
+export function heapSort(arr) {
     let n = arr.length;
 
     for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
@@ -14,8 +14,9 @@ function heapSort(arr) {
         // Heapify the reduced heap
         heapify(arr, i, 0);
     }
-    
+
     console.log("Final Sorted Array:", arr);
+    return arr;
 }
 
 
