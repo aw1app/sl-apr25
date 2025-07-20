@@ -41,5 +41,6 @@ binarySearch(arr, -1);
 console.log("\n binary search on a unsorted array demo");
 const arr1 = [11, 3, 5, 28, 9];
 
+// first sort the array yusing any of the sorting algo and then apply binary search
 import {heapSort} from '../SORTING/heapSort-Ujjwal.js'
 binarySearch (heapSort(arr1), 28 );
