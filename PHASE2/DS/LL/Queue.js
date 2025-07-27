@@ -15,14 +15,12 @@ class Queue {
         if (this.isEmpty()) {
             return "Queue is empty";
         }
-        return this.items.shift();
+        return this.items.shift(); // remove element at index 0.
     }
 
     // Empty check
     isEmpty() {
-
-        if (this.items.length === 0) return true;
-        else return false;
+        return (this.items.length === 0);
     }
 
 
