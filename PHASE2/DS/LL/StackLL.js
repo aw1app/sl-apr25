@@ -82,5 +82,5 @@ console.log("Top:", stack.peek()); // Peek at the top element
 console.log("Popped:", stack.pop()); // Pop the top element
 console.log("Popped:", stack.pop()); // Pop the top element
 
-console.log("------ Stack after above 2 pops-----"); 
+console.log("\n------ Stack after above 2 pops-----"); 
 stack.display();
