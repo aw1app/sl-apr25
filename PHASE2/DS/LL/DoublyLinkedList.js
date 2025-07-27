@@ -98,3 +98,5 @@ linkedList1.display();
 console.log("------");
 linkedList1.addAtPosition(117, 2);
 linkedList1.display();
+
+// TASK-3: Try deleteAtposition(position)
