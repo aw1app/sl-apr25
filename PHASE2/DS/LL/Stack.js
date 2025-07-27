@@ -4,45 +4,45 @@ class Stack {
         this.items = [];
     }
 
-    push(data){
-        this.items.push(data); 
+    push(data) {
+        this.items.push(data);
     }
 
-    pop(){
+    pop() {
         // check for empty stack
-        if ( this.isEmpty() ) 
+        if (this.isEmpty())
             console.log("Cannot pop as the stack is empty")
 
         else
-        return this.items.pop();
+            return this.items.pop();
     }
 
     // peek
-    peek(){
-         if ( this.isEmpty() ) 
+    peek() {
+        if (this.isEmpty())
             return null;
         else
-            return  this.items[this.items.length-1];
+            return this.items[this.items.length - 1];
     }
 
 
     // Empty check
-    isEmpty(){
+    isEmpty() {
 
-        if (this.items.lengthcls === 0) return true;
+        if (this.items.length === 0) return true;
         else return false;
     }
 
-    clear(){
-       this.items = []; 
+    clear() {
+        this.items = [];
     }
 
-    display(){
-        return this.items;
-    }
-
-    size(){
+    size() {
         return this.items.length;
+    }
+
+    display() {
+        return this.items;
     }
 
 }
