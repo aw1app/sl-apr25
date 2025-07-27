@@ -74,9 +74,13 @@ stack.push(30);
 
 
 console.log("Stack Display:"); // Display the stack
- stack.display();
+stack.display();
 
+console.log("------"); 
 console.log("Top:", stack.peek()); // Peek at the top element
 
 console.log("Popped:", stack.pop()); // Pop the top element
 console.log("Popped:", stack.pop()); // Pop the top element
+
+console.log("------ Stack after above 2 pops-----"); 
+stack.display();
