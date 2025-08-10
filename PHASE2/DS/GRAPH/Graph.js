@@ -25,10 +25,30 @@ class Graph {
         this.adjacencyList[vertex2] = this.adjacencyList[vertex2].filter(v => v !== vertex1);
     }
 
+    // vertex removal
+   
+
+    //DFS (Graph Traversal)
+
+    dfs(startVertex, visited = new Set())
+    {
+        visited.add(startVertex);
+
+        console.log(startVertex);
+
+        for (let vertex of this.adjacencyList[startVertex]) {
+            if (!visited.has(vertex)) {
+                this.dfs(vertex, visited);
+            }
+        }
+
+    }
+
+
     // Display the graph
     printGraph() {
         for (let vertex in this.adjacencyList) {
-            console.log(vertex + " -> " + this.adjacencyList[vertex].join(", "));
+            console.log(vertex + " -> " + this.adjacencyList[vertex]);
         }
     }
 
@@ -46,5 +66,10 @@ graph.addEdge("A", "B");
 graph.addEdge("B", "C");
 graph.addEdge("C", "A");
 graph.addEdge("C", "D");
+
 graph.printGraph();
 
+
+// check dfs  
+console.log("DFS Demo. DFS from A") 
+graph.dfs("A")
