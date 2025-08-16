@@ -34,7 +34,12 @@ public class ArrayDemo {
 		System.out.println(Arrays.toString(numbers1[1]));
 
 		//// nice print of a 2d array
-		int[][] numbers = { { 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 0 } };
+		int[][] numbers = { 
+				{ 1, 2, 3, 4, 5 },
+				{ 6, 7,  9, 0 } 
+				};
+		
+		
 		for (int i = 0; i < numbers.length; i++) {
 			
 			for (int j = 0; j < numbers[i].length; j++) {
