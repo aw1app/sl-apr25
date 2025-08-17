@@ -13,7 +13,7 @@ public class Doctor {
 	String specialist;
 	
 	
-	// methods
+	// methods / actions / behaviors
 	void performSurgery(){
 		System.out.println("Starting surgery ");
 	}
