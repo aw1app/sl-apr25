@@ -1,3 +1,4 @@
+package staff;
 
 public class Technician {
 	// properties / fields / instance variables

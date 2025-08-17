@@ -1,16 +1,17 @@
+package staff;
 
 public class Doctor {
 
 	// properties / fields / instance variables
-	String name;
-	int age;
+	private String name;
+	private int age;
 
-	long phone;
+	private long phone;
 
-	int licenseNumber;
+	private int licenseNumber;
 
-	String degree;
-	String specialist;
+	private String degree;
+	private String specialist;
 
 	/*
 	 * CONSTRUCTORS (constructors are like methods, whose sole job is to create
@@ -19,23 +20,23 @@ public class Doctor {
 	 */
 
 	// default constructor
-	Doctor() {
+	public Doctor() {
 
 	}
 
 	// custom constructors
-	Doctor(String name, int age) {
+	public Doctor(String name, int age) {
 		this.name = name;
 		this.age = age;
 	}
 
-	Doctor(String name, int age, int licenseNumber) {
+	public Doctor(String name, int age, int licenseNumber) {
 		this(name, age);
 
 		this.licenseNumber = licenseNumber;
 	}
 
-	Doctor(String name, int age, int licenseNumber, String specialist) {
+	public Doctor(String name, int age, int licenseNumber, String specialist) {
 		this(name, age, licenseNumber);
 
 		this.specialist = specialist;
@@ -51,6 +52,23 @@ public class Doctor {
 	}
 
 	// methods / actions / behaviors
+	String getName(){
+		
+		return this.name;
+	}
+	
+	
+	void setName(String name){
+		//
+		// send an OTP
+		//
+		// if(OTP succeeded){
+		 this.name = name;
+		 //}
+			
+	}
+	
+	
 	void performSurgery() {
 		System.out.println("Starting surgery ");
 	}

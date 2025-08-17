@@ -1,3 +1,6 @@
+package customers;
+
+
 import java.util.Date;
 
 public class Patient {
