@@ -41,9 +41,15 @@ public class Doctor {
 		this.specialist = specialist;
 	}
 
-	
-	// TASK-2: Create a custom constructor that will set all the properties of this class.
-	
+	// TASK-2: Create a custom constructor that will set all the properties of this
+	// class.
+	Doctor(String name, int age, int licenseNumber, String specialist, long phone, String degree) {
+		this(name, age, licenseNumber, specialist);
+
+		this.phone = phone;
+		this.degree = degree;
+	}
+
 	// methods / actions / behaviors
 	void performSurgery() {
 		System.out.println("Starting surgery ");
