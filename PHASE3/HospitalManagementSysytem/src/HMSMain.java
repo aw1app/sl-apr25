@@ -25,6 +25,8 @@ public class HMSMain {
 		patient1.disease="toothache";
 		
 		patient1.bookAppointment(doctor2);
+		
+		//TASK-1: Create a Technican and let that technician do some activity
 
 	}
 
