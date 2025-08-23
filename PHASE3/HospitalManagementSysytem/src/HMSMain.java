@@ -85,7 +85,16 @@ public class HMSMain {
 		((Doctor) gdoctor3).performSurgery(); // gdoctor3 is also a Doctor
 		
 		((IProfessor) gdoctor3) .lecture(); // gdoctor3 is also a Professor
-
+		
+		
+		IGreet x1 = new Z();
+		x1.sayHello(gdoctor3.getName());
+		
+//		Y x1 = new Y();
+//		x1.sayHi(gdoctor3.getName());
+		
+//		Z x1 = new Z();
+//		x1.greet(gdoctor3.getName());
 	}
 
 }
