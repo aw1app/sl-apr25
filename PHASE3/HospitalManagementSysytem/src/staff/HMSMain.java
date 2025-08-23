@@ -1,4 +1,7 @@
 package staff;
+
+import customers.Patient;
+
 public class HMSMain {
 
 	public static void main(String[] args) {
@@ -51,6 +54,17 @@ public class HMSMain {
 		technician.shift="night";
 		
 		technician.maintainEquipment();
+		
+		
+		// Create GuestDoctors
+		System.out.println("\n\n Announcing Guest Doctors at this Hospital !!  ");
+		GuestDoctor  gdoctor1 = new GuestDoctor("Hitakito", 34, 3563563, "Heart", "Tokyo" );
+		
+		System.out.println("Welcome " + gdoctor1.getName());
+		gdoctor1.fastDiagnose();
+		gdoctor1.performSurgery();
+		
+		
 		
 
 	}

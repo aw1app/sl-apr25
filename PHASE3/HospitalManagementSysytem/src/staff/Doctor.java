@@ -3,15 +3,15 @@ package staff;
 public class Doctor {
 
 	// properties / fields / instance variables
-	private String name;
+	public String name;
 	private int age;
 
-	private long phone;
+	long phone;
 
-	private int licenseNumber;
+	int licenseNumber;
 
-	private String degree;
-	private String specialist;
+	public String degree;
+	public String specialist;
 
 	/*
 	 * CONSTRUCTORS (constructors are like methods, whose sole job is to create
@@ -52,7 +52,7 @@ public class Doctor {
 	}
 
 	// methods / actions / behaviors
-	String getName(){
+	public String getName(){
 		
 		return this.name;
 	}
