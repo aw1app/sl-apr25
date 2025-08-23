@@ -1,0 +1,4 @@
+Task : Create a subclass of Patient class with 1 or 2 
+new properties and 1 additional method. Try overriding 1 
+method of super class.
+

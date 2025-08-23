@@ -5,7 +5,7 @@ import java.util.Date;
 
 import staff.Doctor;
 
-public class Patient {
+ public abstract class Patient {
 
 	// properties / fields / instance variables
 	public String name;
@@ -14,6 +14,11 @@ public class Patient {
 	public String disease;
 
 	public long phone;
+	
+	public Patient(String name, int age) {
+		this.age=age;
+		this.name=name;
+	}
 
 	// methods / actions / behaviors
 	public void visitHospital(Date d) {
@@ -23,5 +28,7 @@ public class Patient {
 	public void bookAppointment(Doctor doctor) {
 		System.out.println("Taking an appointment to meet doctor ..." + doctor.name);
 	}
+	
+	abstract public void payBill(int amount);
 
 }

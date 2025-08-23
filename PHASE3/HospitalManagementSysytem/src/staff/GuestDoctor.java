@@ -1,6 +1,19 @@
 package staff;
 
-public class GuestDoctor extends Doctor {
+public class GuestDoctor extends Doctor implements IProfessor {
+	
+	IProfessor professor;
+	
+	@Override
+	public void lecture() {
+		professor.lecture();		
+	}
+
+	@Override
+	public void guideThesis() {
+		professor.guideThesis();
+	}
+	
 	// below are properties unique to this class (GuestDoctor)
 	String origin;
 	public boolean IsWearingATie=false;
@@ -12,6 +25,12 @@ public class GuestDoctor extends Doctor {
 	public GuestDoctor(String name, int age, int licenseNumber, String specialist, String origin) {
 		super(name, age, licenseNumber, specialist);
 		this.origin = origin;
+	}
+	
+	public GuestDoctor(String name, int age, int licenseNumber, String specialist, String origin, IProfessor professor) {
+		super(name, age, licenseNumber, specialist);
+		this.origin = origin;
+		this.professor = professor;
 	}
 
 	// below are methods unique to this class (GuestDoctor)

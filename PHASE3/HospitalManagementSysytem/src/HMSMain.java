@@ -1,8 +1,11 @@
 
 
+import customers.DummyPatient;
 import customers.Patient;
 import staff.Doctor;
 import staff.GuestDoctor;
+import staff.IProfessor;
+import staff.Professor;
 import staff.Technician;
 
 public class HMSMain {
@@ -41,10 +44,9 @@ public class HMSMain {
 		System.out.println("Doctor 3 details :  " + doctor3);
 		System.out.println("Advice from doctor 3:  " + docAdvice3);
 
-		Patient patient1 = new Patient();
-		patient1.age = 21;
-		patient1.name = "Mohan";
+		Patient patient1 = new DummyPatient("Mohan",21);
 		patient1.disease = "toothache";
+		patient1.payBill(100);
 
 		patient1.bookAppointment(doctor2);
 
@@ -73,7 +75,16 @@ public class HMSMain {
 		((GuestDoctor) gdoctor2).fastDiagnose();
 		gdoctor2.performSurgery();
 		
-		System.out.println("Doctor's advice :  " + gdoctor2.advice() ); // 1 week or 1 day rest? 
+		System.out.println("Doctor's advice :  " + gdoctor2.advice() ); // 1 week or 1 day rest?
+		
+		
+		IProfessor professor3 =  new Professor();
+		GuestDoctor gdoctor3 = new GuestDoctor("Prakash", 44, 363563, "ENT", "Paris", professor3);
+
+		System.out.println("Welcome " + gdoctor3.getName());
+		((Doctor) gdoctor3).performSurgery(); // gdoctor3 is also a Doctor
+		
+		((IProfessor) gdoctor3) .lecture(); // gdoctor3 is also a Professor
 
 	}
 
