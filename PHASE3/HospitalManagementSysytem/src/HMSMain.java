@@ -78,7 +78,7 @@ public class HMSMain {
 		System.out.println("Doctor's advice :  " + gdoctor2.advice() ); // 1 week or 1 day rest?
 		
 		
-		IProfessor professor3 =  new Professor();
+		Professor professor3 =  new Professor();
 		GuestDoctor gdoctor3 = new GuestDoctor("Prakash", 44, 363563, "ENT", "Paris", professor3);
 
 		System.out.println("Welcome " + gdoctor3.getName());
