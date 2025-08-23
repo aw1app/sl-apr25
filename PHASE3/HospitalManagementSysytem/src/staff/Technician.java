@@ -2,15 +2,15 @@ package staff;
 
 public class Technician {
 	// properties / fields / instance variables
-	String name;
-	int age;
-	long phone;
+	public String name;
+	public int age;
+	public long phone;
 	int technicianId;
-	String department;
-	String shift;
+	public String department;
+	public String shift;
 
 	// methods / actions / behaviors
-	void maintainEquipment() {
+	public void maintainEquipment() {
 		System.out.println("Maintaining medical equipment...");
 	}
 

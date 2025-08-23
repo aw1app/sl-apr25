@@ -12,6 +12,8 @@ public class Doctor {
 
 	public String degree;
 	public String specialist;
+	
+	public boolean IsWearingATie=true;
 
 	/*
 	 * CONSTRUCTORS (constructors are like methods, whose sole job is to create
@@ -58,7 +60,7 @@ public class Doctor {
 	}
 	
 	
-	void setName(String name){
+	public void setName(String name){
 		//
 		// send an OTP
 		//
@@ -69,7 +71,7 @@ public class Doctor {
 	}
 	
 	
-	void performSurgery() {
+	public void performSurgery() {
 		System.out.println("Starting surgery ");
 	}
 
@@ -77,7 +79,7 @@ public class Doctor {
 		System.out.println("diagnosing..");
 	}
 
-	String advice() {
+	public String advice() {
 		System.out.println("advising..");
 
 		return "Take rest for 1 week";
