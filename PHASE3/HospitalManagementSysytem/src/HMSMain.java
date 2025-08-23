@@ -73,7 +73,7 @@ public class HMSMain {
 		((GuestDoctor) gdoctor2).fastDiagnose();
 		gdoctor2.performSurgery();
 		
-		System.out.println("Doctor's advice :  " + gdoctor2.advice() ); // 1 week or 1 day rest?
+		System.out.println("Doctor's advice :  " + gdoctor2.advice() ); // 1 week or 1 day rest? 
 
 	}
 
