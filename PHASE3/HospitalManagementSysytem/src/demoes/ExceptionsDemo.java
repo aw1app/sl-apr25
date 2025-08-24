@@ -1,5 +1,7 @@
 package demoes;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -22,9 +24,8 @@ public class ExceptionsDemo {
 			System.out.println(" Hey, you have entered zero. Did you mean 1?? I will take it as 1");
 			divideFruitsIntoPieces = 1;
 		}
-		
+
 		float shareOfFruit = 0.0f;
-		
 
 		shareOfFruit = noOfFruits / divideFruitsIntoPieces;
 
@@ -33,9 +34,9 @@ public class ExceptionsDemo {
 		scanner.close();
 
 		int[] intArr = { 4, 6, 9, 13 };
-		//System.err.println(intArr[4]);
-		for(int i=0; i<= intArr.length ; i++)
-			System.out.println(intArr[i]);
+		// System.err.println(intArr[4]);
+		for (int i = 0; i < intArr.length; i++)
+			System.err.println(intArr[i]);
 
 		String filePath = "F:\\Users\\home\\git\\sl-apr25\\PHASE3\\HospitalManagementSysytem\\NOTES-TASKS.txt";
 		try {
@@ -45,7 +46,40 @@ public class ExceptionsDemo {
 			e.printStackTrace();
 		}
 
+		//
+		m1();
+
 		System.out.println(" END ");
+	}
+
+	static public void m1() {
+		String tasksFilePath = "F:\\Users\\home\\git\\sl-apr25\\PHASE3\\HospitalManagementSysytem\\NOTES-TASKS.txt";
+
+		FileReader tasksFile = null;
+		try {
+			tasksFile = new FileReader(tasksFilePath);
+
+			int c = tasksFile.read();
+			while (c != -1) {
+				System.out.println((char) c);
+				c = tasksFile.read();
+			}
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		finally {
+			if(tasksFile!=null)
+				try {
+					tasksFile.close();
+				} catch (IOException e) {
+					System.out.println(" Hmm, could not close the file ");
+					e.printStackTrace();
+				}
+		}
+
 	}
 
 }
