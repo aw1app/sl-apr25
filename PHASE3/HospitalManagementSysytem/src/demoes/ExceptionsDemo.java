@@ -52,6 +52,8 @@ public class ExceptionsDemo {
 		System.out.println(" END ");
 	}
 
+	// demonstration of try with multiple catch blocks
+	// and optional finally block
 	static public void m1() {
 		String tasksFilePath = "F:\\Users\\home\\git\\sl-apr25\\PHASE3\\HospitalManagementSysytem\\NOTES-TASKS.txt";
 
