@@ -30,7 +30,7 @@ public class HMSMain {
 		String docAdvice = doctor1.advice();
 		System.out.println("Advice from doctor 1:  " + docAdvice);
 
-		Doctor doctor2 = new Doctor("Mohini", 47); // doctor class object
+		Doctor doctor2 = new Doctor("Mohini", 47); // doctor class object doctor2 is NOT available
 		//doctor2.licenseNumber = 56565656;
 		doctor2.specialist = "Dental";
 
@@ -39,7 +39,7 @@ public class HMSMain {
 		String docAdvice2 = doctor2.advice();
 		System.out.println("Advice from doctor 2:  " + docAdvice2);
 
-		Doctor doctor3 = new Doctor("Suman", 41, 343434535, "Dental");
+		Doctor doctor3 = new Doctor("Suman", 41, 343434535, "Dental", true); // doctor3 is available
 		String docAdvice3 = doctor3.advice();
 
 		System.out.println("Doctor 3 details :  " + doctor3);
