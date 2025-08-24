@@ -2,3 +2,15 @@ Task : Create a subclass of Patient class with 1 or 2
 new properties and 1 additional method. Try overriding 1 
 method of super class.
 
+
+
+Task-Final: 
+Create a Java program to calculate the area of a circle.
+ Use a final variable to store the value of π (pi) as a constant.
+ Allow the user to input the radius and compute the area using the formula: Area = π * radius * radius.
+ 
+ Ensure that the value of π cannot be modified in the program.
+ 
+ Circle
+ c1.area()
+ c2.area()
