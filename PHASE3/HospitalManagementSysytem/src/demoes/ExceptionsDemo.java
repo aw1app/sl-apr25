@@ -66,11 +66,13 @@ public class ExceptionsDemo {
 			}
 
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			System.out.println(" Hmm, could not find the file in the given location " + e);
+			//e.printStackTrace();
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println(" Hmm, IOException happended " + e);
 		}
 		finally {
+			System.out.println(" INSIDE finally block" );
 			if(tasksFile!=null)
 				try {
 					tasksFile.close();
