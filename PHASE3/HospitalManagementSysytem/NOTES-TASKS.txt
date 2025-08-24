@@ -14,3 +14,8 @@ Create a Java program to calculate the area of a circle.
  Circle
  c1.area()
  c2.area()
+ 
+ 
+ Task - custome Exception:
+ Create a custom exception for this project.
+ Demonstrate its usage.

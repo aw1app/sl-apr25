@@ -14,6 +14,8 @@ public class Doctor {
 	public String specialist;
 	
 	public boolean IsWearingATie=true;
+	
+	public boolean isAvailable=false;
 
 	/*
 	 * CONSTRUCTORS (constructors are like methods, whose sole job is to create
@@ -44,6 +46,14 @@ public class Doctor {
 		this.specialist = specialist;
 	}
 
+	public Doctor(String name, int age, int licenseNumber, String specialist, boolean isAvailable) {
+		this(name, age, licenseNumber);
+
+		this.specialist = specialist;
+		this.isAvailable = isAvailable;
+	}
+
+	
 	// TASK-2: Create a custom constructor that will set all the properties of this
 	// class.
 	Doctor(String name, int age, int licenseNumber, String specialist, long phone, String degree) {
@@ -71,6 +81,16 @@ public class Doctor {
 	}
 	
 	
+	
+	
+	public boolean isAvailable() {
+		return isAvailable;
+	}
+
+	public void setAvailable(boolean isAvailable) {
+		this.isAvailable = isAvailable;
+	}
+
 	public void performSurgery() {
 		System.out.println("Starting surgery ");
 	}

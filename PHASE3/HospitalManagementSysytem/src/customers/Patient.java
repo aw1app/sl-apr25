@@ -3,6 +3,7 @@ package customers;
 
 import java.util.Date;
 
+import exceptions.DoctorNotFoundException;
 import staff.Doctor;
 
  public abstract class Patient {
@@ -25,8 +26,11 @@ import staff.Doctor;
 		System.out.println("Visiting the hospital .. on date  " + d );
 	}
 
-	public void bookAppointment(Doctor doctor) {
+	public void bookAppointment(Doctor doctor) throws DoctorNotFoundException{
 		System.out.println("Taking an appointment to meet doctor ..." + doctor.name);
+		
+		if(!doctor.isAvailable)
+			throw new DoctorNotFoundException(doctor.name + " is not available today!");
 	}
 	
 	abstract public void payBill(int amount);

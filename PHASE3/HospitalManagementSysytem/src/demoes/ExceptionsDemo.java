@@ -58,6 +58,7 @@ public class ExceptionsDemo {
 
 	// demonstration of try with multiple catch blocks
 	// and optional finally block
+	// and the throws clause in the method signature
 	static public void m1()  throws IOException {
 		String tasksFilePath = "F:\\Users\\home\\git\\sl-apr25\\PHASE3\\HospitalManagementSysytem\\NOTES-TASKS.txt";
 

@@ -2,6 +2,7 @@
 
 import customers.DummyPatient;
 import customers.Patient;
+import exceptions.DoctorNotFoundException;
 import staff.Doctor;
 import staff.GuestDoctor;
 import staff.IProfessor;
@@ -48,7 +49,11 @@ public class HMSMain {
 		patient1.disease = "toothache";
 		patient1.payBill(100);
 
-		patient1.bookAppointment(doctor2);
+		try {
+			patient1.bookAppointment(doctor2);
+		} catch (DoctorNotFoundException e) {
+			System.err.println(e.getMessage());
+		}
 
 		// TASK-1: Create a Technican and let that technician do some activity
 		Technician technician = new Technician();
