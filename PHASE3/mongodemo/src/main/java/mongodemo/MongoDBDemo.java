@@ -40,10 +40,26 @@ public class MongoDBDemo {
 		System.out.println("\n\n Display products with name cotainin HP");
 		readProductsNameContaining("HP");
 		
-		updateProductName("HP printer 2");
+		//updateProductName("HP printer 2");  // docs will now have 
+		
+		System.out.println("\n\n updating product prices to 5000");
+		updateProductPrice(5000.0f);
+		
+		System.out.println("\n\n deleting all product whose names start with HP");
+		deleteByNameStarting("HP");
 
 	}
 
+	
+	private static void updateProductPrice(float newPrice) {
+		Bson filter = Filters.exists("price");  // all docs that have "price" key/attribute
+		
+		Bson update = Updates.set("price",newPrice);
+		
+		//productsCollection.updateOne(filter, update); // update the first matched doc	
+		productsCollection.updateMany(filter, update); // update all the matched doc	
+	}
+	
 	
 	private static void updateProductName(String name) {
 		Bson filter = Filters.eq("name", name);
@@ -75,9 +91,9 @@ public class MongoDBDemo {
 	private static void readProductsNameContaining(String text) {
 
 		// Find all products
-		// System.out.printf("\n All products with price > :%s", price);
+		// System.out.printf("\n All products having text :%s", text);
 
-		Bson filter = Filters.eq("name", text);
+		Bson filter = Filters.regex("name", text, "i"); // i for case insensitive match
 		productsCollection.find(filter).forEach(doc -> System.out.println(doc.toJson()));
 
 	}
@@ -89,7 +105,14 @@ public class MongoDBDemo {
 
 		Bson filter = Filters.gte("price", price);
 		productsCollection.find(filter).forEach(doc -> System.out.println(doc.toJson()));
-
 	}
+	
+	private static void deleteByNameStarting(String text) {
+		Bson filter = Filters.regex("name", "^"+text, "i"); // "^" is regex match for starting with. 
+		// Use "$" at the end for EndsWith match.  like text+"$"
+		
+		productsCollection.deleteMany(filter);		
+	}
+	
 
 }
