@@ -1,11 +1,14 @@
 package mongodemo;
 
 import org.bson.Document;
+import org.bson.conversions.Bson;
 
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
+import com.mongodb.client.model.Updates;
 
 public class MongoDBDemo {
 
@@ -29,12 +32,63 @@ public class MongoDBDemo {
 		database = mongoClient.getDatabase("sl-we-estore");
 		productsCollection = database.getCollection("products");
 
+		readProducts();
+
+		System.out.println("\n\n Display products with price > 1500");
+		readProductsPriceGreaterThanOrEqual(1500.0f);
+		
+		System.out.println("\n\n Display products with name cotainin HP");
+		readProductsNameContaining("HP");
+		
+		updateProductName("HP printer 2");
+
+	}
+
+	
+	private static void updateProductName(String name) {
+		Bson filter = Filters.eq("name", name);
+		
+		Bson update = Updates.set("name", name.toUpperCase());
+		
+		productsCollection.updateOne(filter, update); // update the first matched doc		
+	}
+	
+	
+	private static void insertProduct() {
 		// Let's insert a new product
-		Document product = new Document("name", "HP printer").append("price", 2500.25);
+		Document product = new Document("name", "HP printer 2").append("price", 1500.25).append("warranty", 5);
 
 		productsCollection.insertOne(product);
 
 		System.out.println(" successfully inserted a new product ");
+	}
+
+	private static void readProducts() {
+
+		// Find all products
+		System.out.println("\nAll products:");
+
+		productsCollection.find().forEach(doc -> System.out.println(doc.toJson()));
+
+	}
+
+	private static void readProductsNameContaining(String text) {
+
+		// Find all products
+		// System.out.printf("\n All products with price > :%s", price);
+
+		Bson filter = Filters.eq("name", text);
+		productsCollection.find(filter).forEach(doc -> System.out.println(doc.toJson()));
+
+	}
+
+	private static void readProductsPriceGreaterThanOrEqual(float price) {
+
+		// Find all products
+		// System.out.printf("\n All products with price > :%s", price);
+
+		Bson filter = Filters.gte("price", price);
+		productsCollection.find(filter).forEach(doc -> System.out.println(doc.toJson()));
 
 	}
 
