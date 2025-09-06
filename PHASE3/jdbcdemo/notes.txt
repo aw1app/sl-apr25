@@ -8,3 +8,14 @@ CREATE TABLE products (
     category VARCHAR(255) DEFAULT NULL,
     PRIMARY KEY (id)
 );
+
+
+INSERT INTO products (id, name, price, category) VALUES
+(1, 'Laptop', 1200.00, 'Electronics'),
+(2, 'Mouse', 100.00, 'Electronics'),
+(3, 'Notebook', 5.00, 'Stationary'),
+(4, 'Pencil', 1.00, 'Stationary'),
+(6, 'Apple Watch', 5003.00, 'Electronics'),
+(50, 'Dell Laptop 1', 300000.08, 'Electronics'),
+(52, 'Toyota Car', 500000.00, 'Automobiles'),
+(59, 'Maruti Swift', 500000.00, 'Automobiles');
