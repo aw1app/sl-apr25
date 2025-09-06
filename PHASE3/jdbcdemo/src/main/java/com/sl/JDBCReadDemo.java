@@ -28,7 +28,7 @@ public class JDBCReadDemo {
 			ResultSet rs = statement.executeQuery(sqlSelect);
 			
 			System.out.printf("\n\n Products table data\n");
-			System.out.printf(" ID NAME     PRICE CATEGORY \n");
+			System.out.printf(" ID    NAME                  PRICE       CATEGORY \n");
 			while(rs.next()) {
 				
 				int id = rs.getInt("id");
@@ -36,14 +36,13 @@ public class JDBCReadDemo {
 				float price = rs.getFloat("price");
 				String category = rs.getString("category");
 				
-				System.out.printf(" %s  %s  %s  %s  \n",id,name,price,category );				
+				System.out.printf(" %-5s  %-20s  %-8s  %-10s  \n",id,name,price,category );				
 			}
 			
 		} catch (SQLException e) {
 			System.out.println("Connection failed" + e);
 			// e.printStackTrace();
 		}
-
 		
 		
 		// At the end close the DB connection
