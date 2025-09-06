@@ -47,7 +47,8 @@ public class MongoDBDemo {
 		
 		System.out.println("\n\n deleting all product whose names start with HP");
 		deleteByNameStarting("HP");
-
+		
+		readProducts();
 	}
 
 	
