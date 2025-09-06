@@ -32,6 +32,12 @@ public class MongoDBDemo {
 		database = mongoClient.getDatabase("sl-we-estore");
 		productsCollection = database.getCollection("products");
 
+		// CRUD Ops
+		
+		// INSERT 
+		//insertProduct();
+		
+		// READ
 		readProducts();
 
 		System.out.println("\n\n Display products with price > 1500");
@@ -40,11 +46,14 @@ public class MongoDBDemo {
 		System.out.println("\n\n Display products with name cotainin HP");
 		readProductsNameContaining("HP");
 		
+		// UPDATE
 		//updateProductName("HP printer 2");  // docs will now have 
 		
 		System.out.println("\n\n updating product prices to 5000");
 		updateProductPrice(5000.0f);
 		
+		
+		// DELETE
 		System.out.println("\n\n deleting all product whose names start with HP");
 		deleteByNameStarting("HP");
 		
