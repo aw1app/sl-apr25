@@ -16,11 +16,24 @@ public class WelcomeServlet  extends HttpServlet{
 		
 		PrintWriter out = response.getWriter();
 		
+		
+		// Extract data from the Query String
+		String name = request.getParameter("name");
+		String age = request.getParameter("age");
+		
 		out.println("<h1> Welcome to Estore </h1>");
 		
 		
-		out.close();
+		String responseMesage = "You are "+ name + " and your age is " + age;
 		
+		
+		out.println("<h2> " + responseMesage +  "</h2>");
+		
+		
+		out.close();		
 	}
+	
+	
+	
 
 }
