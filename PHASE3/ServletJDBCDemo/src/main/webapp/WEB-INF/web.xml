@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+<web-app id="WebApp_ID" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 	<display-name>ServletJDBCDemo</display-name>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
@@ -11,4 +14,28 @@
 		<welcome-file>default.jsp</welcome-file>
 		<welcome-file>default.xhtml</welcome-file>
 	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>ProductsServlet</servlet-name>
+		<servlet-class>com.sl.ProductsServlet</servlet-class>
+		<init-param>
+			<param-name>ConnectionURL</param-name>
+			<param-value>jdbc:mysql://localhost:3306/estore</param-value>
+		</init-param>
+		<init-param>
+			<param-name>DBAdminName</param-name>
+			<param-value>root</param-value>
+		</init-param>
+		<init-param>
+			<param-name>DBAdminPassword</param-name>
+			<param-value>rootroot</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ProductsServlet</servlet-name>
+		<url-pattern>/products</url-pattern>
+	</servlet-mapping>
+
+
 </web-app>

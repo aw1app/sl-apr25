@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/products")
+//@WebServlet("/products")
 public class ProductsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -24,15 +24,15 @@ public class ProductsServlet extends HttpServlet {
 	public void init(ServletConfig config) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver"); // optional
-			String connectionURL = "jdbc:mysql://localhost:3306/estore";
+			String connectionURL = config.getInitParameter("ConnectionURL");
 
 			// 1. Create a Connection object
-			conn = DriverManager.getConnection(connectionURL, "root", "rootroot");
+			String adminID = config.getInitParameter("DBAdminName");
+			String DBAdminPassword = config.getInitParameter("DBAdminPassword");
+			conn = DriverManager.getConnection(connectionURL, adminID, DBAdminPassword);
 
 			System.out.println("Connection established succesfully.");
 
-			// 2. Create a Statement
-			statement = conn.createStatement();
 		} catch (SQLException | ClassNotFoundException e) {
 			System.out.println("Connection failed" + e);
 		}
@@ -43,6 +43,8 @@ public class ProductsServlet extends HttpServlet {
 		out.println("<h1> " + "Welcome to EStore ! " + "</h1>");
 
 		try {
+			// 2. Create a Statement
+			statement = conn.createStatement();
 			// 3. Execute SQL
 			String sqlSelect = "SELECT * FROM products";
 			ResultSet rs = statement.executeQuery(sqlSelect);
