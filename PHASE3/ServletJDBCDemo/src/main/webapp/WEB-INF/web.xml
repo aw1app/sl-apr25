@@ -15,26 +15,39 @@
 		<welcome-file>default.xhtml</welcome-file>
 	</welcome-file-list>
 
+	<context-param>
+		<param-name>ConnectionURL</param-name>
+		<param-value>jdbc:mysql://localhost:3306/estore</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>DBAdminName</param-name>
+		<param-value>root</param-value>
+	</context-param>
+	<context-param>
+		<param-name>DBAdminPassword</param-name>
+		<param-value>rootroot</param-value>
+	</context-param>
+
 	<servlet>
 		<servlet-name>ProductsServlet</servlet-name>
 		<servlet-class>com.sl.ProductsServlet</servlet-class>
-		<init-param>
-			<param-name>ConnectionURL</param-name>
-			<param-value>jdbc:mysql://localhost:3306/estore</param-value>
-		</init-param>
-		<init-param>
-			<param-name>DBAdminName</param-name>
-			<param-value>root</param-value>
-		</init-param>
-		<init-param>
-			<param-name>DBAdminPassword</param-name>
-			<param-value>rootroot</param-value>
-		</init-param>
 	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>ProductsServlet</servlet-name>
 		<url-pattern>/products</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>NewProductServlet</servlet-name>
+		<servlet-class>com.sl.NewProductServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>NewProductServlet</servlet-name>
+		<url-pattern>/new-product</url-pattern>
 	</servlet-mapping>
 
 

@@ -10,13 +10,12 @@ import java.sql.Statement;
 
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletContext;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-//@WebServlet("/products")
-public class ProductsServlet extends HttpServlet {
+
+public class NewProductServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	Connection conn = null;
@@ -49,7 +48,7 @@ public class ProductsServlet extends HttpServlet {
 			// 2. Create a Statement
 			statement = conn.createStatement();
 			// 3. Execute SQL
-			String sqlSelect = "SELECT * FROM products";
+			String sqlSelect = "INSERT INTO products";
 			ResultSet rs = statement.executeQuery(sqlSelect);
 
 			out.printf("<table border=1> Products table data");
