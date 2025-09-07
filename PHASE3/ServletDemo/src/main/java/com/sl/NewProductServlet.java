@@ -1,12 +1,13 @@
 package com.sl;
 
-import jakarta.servlet.ServletException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Arrays;
+
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
 
 
 @WebServlet("/new-product")
@@ -19,8 +20,11 @@ public class NewProductServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String price = request.getParameter("price");
 		
+		String[] categories = request.getParameterValues("category");
+		
 		out.println("<h1> Thank you for submitting new product! </h1>");
-		String responseMesage = "YoUR PRODUCT name is  "+ name + " price is " + price;
+		String responseMesage = "YoUR PRODUCT name is  "+ name + " price is " + price 
+				+ " and categories are " +Arrays.toString(categories);
 		
 		out.println("<h2> " + responseMesage +  "</h2>");
 		out.close();		
