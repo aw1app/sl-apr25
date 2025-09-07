@@ -43,8 +43,8 @@ public class ProductsServlet extends HttpServlet {
 			String sqlSelect = "SELECT * FROM products";
 			ResultSet rs = statement.executeQuery(sqlSelect);
 			
-			out.printf("<table> Products table data");
-			out.printf("<th> <td>ID    <td>NAME<td>   PRICE <td>      CATEGORY </th");
+			out.printf("<table border=1> Products table data");
+			out.printf("<tr> <td>ID <td>NAME<td>   PRICE <td>   CATEGORY </tr>");
 			while(rs.next()) {
 				
 				int id = rs.getInt("id");
