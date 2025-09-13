@@ -20,8 +20,7 @@ public class Q extends HttpServlet {
 		out.println("<h2> " + "Welcome to Servlet Q ! " + "</h2>");
 
 		System.out.println(" INSIDE Servlet Q doGet method END");
-		out.close();
-		
+		out.close();		
 	}
 
 }
