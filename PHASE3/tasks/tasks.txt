@@ -1,0 +1,4 @@
+Task-1:
+
+Create a String array of 5 fruit names.
+Use scriptlet tags and while loop to print the elements of the fruits.
