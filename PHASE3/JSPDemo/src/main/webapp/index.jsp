@@ -10,7 +10,11 @@
 
 <h1> This is the home page opf ESTORE</h1>
 
-<a href="jsp-expressions-decl-scriptlets-demo.jsp" > JSP Exp/Decl/Scriptlets Demo</a>
+<p>LESSON 1</p>
+<a href="lesson1/jsp-expressions-decl-scriptlets-demo.jsp" > JSP Exp/Decl/Scriptlets Demo</a>
+<br>
 
+<p>LESSON 2</p>
+<a href="lesson2/directives-demo.jsp"> Directives Demo</a>
 </body>
 </html>

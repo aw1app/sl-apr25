@@ -55,7 +55,20 @@ int[] numberArray = {3,4,5,6,7,8};
 	<% }	%>
 
 
-<br><br> 
+<br><br><p> TASK-1 </p>
+<%! String[] fruits = { "Apple", "Banana", "Gauva", "Mango", "Pear" }; %>
+
+	<%	
+	int i = 0;
+	while (i < fruits.length) {
+	%>
+	<li><%=fruits[i]%></li>
+	<%
+	i++;
+	}
+	%>
+
+	<br><br> 
 <a href="index.jsp"> Home page </a>
 
 </body>
