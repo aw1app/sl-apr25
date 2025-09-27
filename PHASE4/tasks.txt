@@ -1,1 +1,4 @@
-JUNIT-1: Create another test case for sum method of Calculator class.
+JUNIT-1: Create another test case for sum method of Calculator class
+
+JUNIT-2: Create 2 test cases for divide method of Calculator class
+
