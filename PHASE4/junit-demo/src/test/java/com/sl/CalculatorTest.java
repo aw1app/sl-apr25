@@ -55,5 +55,21 @@ class CalculatorTest {
 		assertEquals(expectedResult, actualResult);		
 	}
 
+	
+	@Test
+	void testDivide1() {
+		
+		// inputs 
+		int x=4, y =5;
+		
+		// expected output 
+		float expectedResult = 0.8f;
+		
+		Calculator calculator = new Calculator();
+		
+		float actualResult = calculator.divide(x, y);
+		
+		assertEquals(expectedResult, actualResult);		
+	}
 
 }
