@@ -35,5 +35,14 @@ class TimeoutDemo {
 		
 		assertTrue(a > b); // pass 
 	}
+	
+	@Test
+	@Timeout(value =1, unit = TimeUnit.SECONDS)
+	void testAdd4() {
+		int a = 4;
+		int b = 0;
+		
+		assertTrue(a > b); // pass 
+	}
 
 }
