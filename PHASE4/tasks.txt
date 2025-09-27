@@ -1,0 +1,1 @@
+JUNIT-1: Create another test case for sum method of Calculator class.
