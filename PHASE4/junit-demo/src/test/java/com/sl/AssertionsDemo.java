@@ -4,6 +4,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+/*
+ * Different assertions we can use in test cases.
+ */
 class AssertionsDemo {
 
 	@Test
@@ -42,8 +45,7 @@ class AssertionsDemo {
 		assertArrayEquals(a1, a2); // pass
 		
 		//assertThrows(ArithmeticException.class,  () -> { new Calculator().divide(10, 1); } ); // fail
-		assertThrows(ArithmeticException.class,  () -> { new Calculator().divide(10, 0); } ); // pass
-		
+		assertThrows(ArithmeticException.class,  () -> { new Calculator().divide(10, 0); } ); // pass		
 				
 	}
 
