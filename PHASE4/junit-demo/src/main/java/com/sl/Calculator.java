@@ -9,7 +9,7 @@ public class Calculator {
 	
 	
 	public float divide(int a, int b){		
-		return (float) a/ (float) b;		
+		return  a/ b;		
 	}
 	
 
