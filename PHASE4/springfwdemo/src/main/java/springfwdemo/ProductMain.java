@@ -9,7 +9,7 @@ public class ProductMain {
 
 		// IProduct p1 = new Product("TV", " 55 LED television", 55000.0f);
 
-		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
 		System.out.println("\n\n Product Bean using constructor injection demo ");
 		IProduct p1 = (IProduct) context.getBean("product1");
