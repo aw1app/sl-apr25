@@ -20,7 +20,7 @@ public class ProductMain {
 
 		
 		System.out.println("\n\n Product Bean using setter injection demo ");
-		IProduct p2 = (IProduct) context.getBean("product2");
+		IProduct p2 =  context.getBean("product2", IProduct.class);
 
 		System.out.println("Product p2's name is " + p2.getName());
 		System.out.println("Product p2's desc is " + p2.getDesc());
