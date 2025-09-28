@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- Bean definition for Product using constructor injection -->
+
+	<bean id="product1" class="springfwdemo.Product">
+
+		<constructor-arg name="name" value="TV" />
+		<constructor-arg name="desc" value="55 LED television" />
+		<constructor-arg name="price" value="55000.0f" />
+
+	</bean>
+
+
+
+</beans>
+
+	 
+	 
