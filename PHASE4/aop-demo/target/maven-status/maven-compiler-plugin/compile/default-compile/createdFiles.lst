@@ -1,0 +1,5 @@
+com\sl\X.class
+com\sl\BankAccount.class
+com\sl\Main.class
+com\sl\aspects\LoggingAspect.class
+com\sl\aspects\MyAspect2.class

@@ -13,5 +13,13 @@ public class X {
 		System.out.println("INSIDE class X method doubleIt");
 		return 2*x;
 	}
+	
+	public int tripleIt(int x) throws Exception {
+		System.out.println("INSIDE class X method tripleIt");
+		
+		if(x == 0) throw new Exception();
+		
+		return 3*x;
+	}
 
 }
