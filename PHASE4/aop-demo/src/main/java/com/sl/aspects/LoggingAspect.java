@@ -1,5 +1,6 @@
 package com.sl.aspects;
 
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
@@ -35,5 +36,13 @@ public class LoggingAspect {
 	public void LogBeforeAnyMethodofPackageComDotSl() {
 		System.out.println("INSIDE LogBeforeAnyMethodofPackageComDotSl");
 	}
+	
+	/* AFTER Advice */
+	// Aspect 5
+	@After("execution(* com.sl.X.doubleIt(..))")
+	public void LogAfterAnyMethodofPackageComDotSl() {
+		System.out.println("INSIDE LogAfterAnyMethodofPackageComDotSl");
+	}
+	
 
 }

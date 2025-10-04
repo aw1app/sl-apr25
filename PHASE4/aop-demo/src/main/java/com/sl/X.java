@@ -10,7 +10,7 @@ public class X {
 	}
 
 	public int doubleIt(int x) {
-
+		System.out.println("INSIDE class X method doubleIt");
 		return 2*x;
 	}
 
