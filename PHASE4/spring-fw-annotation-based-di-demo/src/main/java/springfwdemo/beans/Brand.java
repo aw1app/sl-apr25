@@ -1,4 +1,4 @@
-package springfwdemo;
+package springfwdemo.beans;
 
 import org.springframework.stereotype.Component;
 
