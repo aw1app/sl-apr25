@@ -25,10 +25,15 @@ public class LoggingAspect {
 	// invoked
 	@Before("execution(* com.sl.BankAccount.getBalance( .. ))")
 	public void getBalanceAspect() {
-		System.out.println("INSIDE getBalance method");
+		System.out.println("INSIDE getBalanceAspect ");
 	}
 
 	// Aspect 4
-	// Task-2 : Write an before aspect that will run on any method of any class within com.sl package
+	// Task-2 : Write a before aspect that will run on any method of any class
+	// within com.sl package
+	@Before("execution(* com.sl.*.*(..))")
+	public void LogBeforeAnyMethodofPackageComDotSl() {
+		System.out.println("INSIDE LogBeforeAnyMethodofPackageComDotSl");
+	}
 
 }

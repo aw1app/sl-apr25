@@ -30,6 +30,10 @@ public class Main {
 		acct1.withdraw(2000.0d);
 		//System.out.println("Acct balance is : "+ acct1.getBalance());
 		
+		X x1= context.getBean(X.class);
+		x1.m1();
+		x1.doubleIt(5);
+		
 	}
 
 }
