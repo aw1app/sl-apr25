@@ -20,6 +20,7 @@ public class Main {
 		// System.out.println("Acct balance is : "+ acct1.getBalance());
 
 		acct1.deposit(10000.0d);
+		acct1.deposit(50001.0d);
 
 		// System.out.println("Acct balance is : "+ acct1.getBalance());
 
