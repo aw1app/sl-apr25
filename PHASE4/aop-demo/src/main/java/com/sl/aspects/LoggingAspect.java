@@ -1,6 +1,7 @@
 package com.sl.aspects;
 
 import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
@@ -40,8 +41,15 @@ public class LoggingAspect {
 	/* AFTER Advice */
 	// Aspect 5
 	@After("execution(* com.sl.X.doubleIt(..))")
-	public void LogAfterAnyMethodofPackageComDotSl() {
-		System.out.println("INSIDE LogAfterAnyMethodofPackageComDotSl");
+	public void LogAfterdoubleItMethodofClassX() {
+		System.out.println("INSIDE Aspect 5 LogAfterdoubleItMethodofClassX");
+	}
+	
+	/* AFTER return Advice */
+	// Aspect 6
+	@AfterReturning(pointcut="execution(* com.sl.BankAccount.withdraw(..))", returning = "result")
+	public void LogAfterReturningWithdrawMethodofClassBankAccount(double result) {
+		System.out.println("INSIDE Aspect 6 LogAfterReturningWithdrawMethodofClassBankAccount. Withdraw amount is "+result);
 	}
 	
 
