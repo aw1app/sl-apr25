@@ -1,0 +1,17 @@
+Spring web project (maven project)
+
+1. Update pom.xml with the 
+spring FW version, Java compiler versions
+dependencies..
+build block having the compiler and war plugins
+
+2. Create the following folders and files in your Eclipse project.
+main\webapp\WEB-INF
+main\webapp\WEB-INF\lib
+main\webapp\WEB-INF\web.xml
+main\webapp\WEB-INF\main-servlet.xml
+main\webapp\WEB-INF\views
+
+3. 
+
+
