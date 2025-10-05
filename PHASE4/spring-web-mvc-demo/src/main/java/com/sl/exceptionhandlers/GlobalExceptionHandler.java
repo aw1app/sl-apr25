@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-	@ExceptionHandler(value = ArrayIndexOutOfBoundsException.class)
+	@ExceptionHandler(value = {ArrayIndexOutOfBoundsException.class})
 	@ResponseBody
 	public String expHandler() {
 
-		return "AIOBE: Oops! something went wrong!";
+		return "INSIDE GlobalExceptionHandler AIOBE: Oops! something went wrong!";
 	}
 
-	@ExceptionHandler(value = ArithmeticException.class)
+	@ExceptionHandler(value = {ArithmeticException.class})
 	public String exceptionHandler() {
 		return "arithmetic-exception-handler";// --> JSP File Name
 	}
