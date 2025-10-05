@@ -14,7 +14,7 @@ public class ProductExceptionHandler {
 	@ResponseBody
 	public String productBlank() {
 
-		return "INSIDE ProductExceptionHandler <h3 style='color:red'>Product name cannot be blank</h3>!";
+		return "<h3 style='color:red'>Product name cannot be blank</h3>!";
 	}
 
 	
