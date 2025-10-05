@@ -20,5 +20,11 @@ public class HelloController {
 
 		return "<h1>Hello World 1</h1>";
 	}
+	
+	@GetMapping("/hello2")
+	public String hello2() {
+
+		return "hello2"; // render /WEB-INF/views/hello2.jsp
+	}
 
 }
