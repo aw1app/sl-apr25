@@ -33,7 +33,6 @@ public class HelloController {
 	
 	@GetMapping("/hello2")
 	public String hello2() {
-
 		return "hello2"; // render /WEB-INF/views/hello2.jsp
 	}
 
