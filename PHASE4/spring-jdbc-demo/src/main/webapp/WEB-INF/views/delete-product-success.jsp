@@ -12,7 +12,7 @@
 <body>
 <%@ include file="../../header.jsp" %>
 
-	<h3 style="color: green">Successfully added ${rowCount} product(s)!!
+	<h3 style="color: green">Successfully deleted ${rowCount} product(s)!!
 	</h3>
 
 </body>

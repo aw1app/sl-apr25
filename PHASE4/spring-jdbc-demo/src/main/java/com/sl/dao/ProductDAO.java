@@ -46,9 +46,9 @@ public class ProductDAO {
 	
 	// 3. DELETE a product
 	// Task-3
-	public int deleteProduct(int productId) {
-		
-		return -1;
+	public int deleteProduct(int productId) {		
+		String sql = "DELETE FROM products WHERE id = ?";
+	    return jdbctemplate.update(sql, new Object[] { productId });
 	}
 	
 	
