@@ -11,9 +11,13 @@
 </head>
 <body>
 
-	<c:forEach var="product" items="${products}">
-${product.id}, ${product.name}, ${product.price}, ${product.category} <br/>
+<table border="1">
+
+<c:forEach var="product" items="${products}">
+<tr> <td> ${product.id} <td> ${product.name}<td> ${product.price}<td> ${product.category} </tr>
 </c:forEach>
+
+</table>
 
 
 </body>
