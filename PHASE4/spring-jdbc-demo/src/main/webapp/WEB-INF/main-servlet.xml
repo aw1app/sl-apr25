@@ -40,7 +40,7 @@ http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 	<bean id="dataSource"
 		class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
 		p:driverClassName="${jdbc.driverClassName}"
-		p:url="${jdbc.databaseurl}" p:username="${jdbc.username}"
+		p:url="${jdbc.url}" p:username="${jdbc.username}"
 		p:password="${jdbc.password}">
 	</bean>
 
@@ -48,7 +48,7 @@ http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName"
 			value="com.mysql.cj.jdbc.Driver"></property>
-		<property name="url" value="jdbc:mysql://localhost:3306/cms"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/estore"></property>
 		<property name="username" value="root"></property>
 		<property name="password" value="rootroot"></property>
 	</bean>
