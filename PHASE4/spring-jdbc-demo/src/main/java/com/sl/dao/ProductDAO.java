@@ -45,6 +45,12 @@ public class ProductDAO {
 	
 	
 	// 3. DELETE a product
+	// Task-3
+	public int deleteProduct(int productId) {
+		
+		return -1;
+	}
+	
 	
 	
 	// 4. Update existing product
