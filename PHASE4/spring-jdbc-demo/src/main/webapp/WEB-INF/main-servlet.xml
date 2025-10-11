@@ -58,6 +58,7 @@ http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 		<property name="dataSource" ref="ds"></property>
 	</bean>
 
-
+	<bean id="productDAO" class="com.sl.dao.ProductDAO">
+	</bean>
 
 </beans>
