@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.sl.dao.ProductDAO;
@@ -27,6 +28,15 @@ public class ProductController {
 		model.addAttribute("products", products);
 		
 		return "products"; // views/products.jsp
+	}
+	
+	@PostMapping("/add")
+	public String addProduct(Product product, Model model) {
+		int rowCount = productDAO.insertProduct(product);
+		
+		model.addAttribute("rowCount", rowCount);
+		
+		return "add-product-success"; // WEB-INF/views/add-product-success.jsp
 	}
 
 }

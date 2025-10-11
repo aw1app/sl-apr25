@@ -23,8 +23,8 @@ public class ProductDAO {
 	
 	//1. QUERY
 	public List<Product> getProducts() {
-		
-		return jdbctemplate.query("select * from products", new ProductRowMapper());		
+		String sql = "select * from products";
+		return jdbctemplate.query(sql, new ProductRowMapper());		
 	}
 	
 	// Task: 1b
@@ -32,6 +32,22 @@ public class ProductDAO {
 	public List<Product> getProductsHavingPriceGreaterThan(float price) {
 		return null;
 	}
+	
+	//Task-2 
+	//Create a query that will return products containing a given string in the name
+	
+	
+	// 2. INSERT a new Product
+	public int insertProduct(Product product) {
+		String sql = "INSERT INTO products(name,price,category) VALUES(?,?,?)";
+		return jdbctemplate.update(sql,new Object[] {product.getName(), product.getPrice(), product.getCategory()});		
+	}
+	
+	
+	// 3. DELETE a product
+	
+	
+	// 4. Update existing product
 
 }
 
