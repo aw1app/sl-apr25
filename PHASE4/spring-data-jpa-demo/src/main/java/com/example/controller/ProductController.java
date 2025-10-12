@@ -31,7 +31,7 @@ public class ProductController {
 	}
 
 	// Task - 2
-	// Implement below functionality
+	// Implement below delete functionality
 	@GetMapping("/delete/{id}")
 	public String deleteProduct(@PathVariable("id") int id, RedirectAttributes redirectAttributes) {
 		Optional<Product> optionalProduct = productRepositry.findById(id);
@@ -46,5 +46,12 @@ public class ProductController {
 
 		return "redirect:/products/list-all"; // WEB-INF/views/products.jsp
 	}
+
+	// Task - 3
+	// Implement below find a Single Product and disdplay it's complete details
+	// functionality
+
+	// Task - 4
+	// Implement add a new product functionality
 
 }
