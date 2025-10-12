@@ -33,7 +33,7 @@ public class ProductController {
 	// Implement below functionality
 	@GetMapping("/delete/{id}")
 	public String addProduct(@PathVariable("id") int id, RedirectAttributes redirectAttributes) {
-
+		
 		return "redirect:/products/list-all"; // WEB-INF/views/products.jsp
 	}
 
