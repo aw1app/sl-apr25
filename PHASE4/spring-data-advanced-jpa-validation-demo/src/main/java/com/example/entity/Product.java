@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Size;
 
@@ -23,8 +24,13 @@ public class Product {
 
 	@Column(name = "price")
 	@Min(value = 1, message = "Price must be at least 1")
+	@Max(value = 500000, message = "Price must not exceed 500000")
 	float price;
 
+	
+	//TASK -6 
+	// Add a constraint for price to be not greater than 500000
+	
 	@Column(name = "category")
 	String category;
 

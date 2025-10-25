@@ -105,7 +105,7 @@ public class ProductController {
 			for (ObjectError errorObj : errors) {
 				errorMessages = errorMessages+ "<br>" + errorObj.getDefaultMessage();
 			};
-			System.out.println("errorMessages="+errorMessages);
+			//System.out.println("errorMessages="+errorMessages);
 
 			redirectAttributes.addFlashAttribute("message", "<p style='color:red'> Product creation failed!. Reason(s):" + errorMessages +"<p>");
 
