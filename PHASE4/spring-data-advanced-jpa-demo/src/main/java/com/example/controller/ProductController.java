@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -84,6 +85,21 @@ public class ProductController {
 
 	// Task - 4
 	// Implement add a new product functionality
+	@GetMapping("/new-product")
+	public String addProductForm(Product product, Model model) {
+
+		return "new-product"; // WEB-INF/views/new-product.jsp
+	}
+
+	@PostMapping("/new-product")
+	public String addProduct(Product product, RedirectAttributes redirectAttributes) {
+		
+		Product prodCreated = productRepositry.save(product);
+		
+		redirectAttributes.addFlashAttribute("message", "Product (id=" + prodCreated.getId() + ") created successfully!");
+		
+		return "redirect:/products/list-all"; // WEB-INF/views/products.jsp
+	}
 
 	// search product from UI
 	@GetMapping("/search")

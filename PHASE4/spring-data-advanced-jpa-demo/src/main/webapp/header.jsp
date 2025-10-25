@@ -6,9 +6,9 @@
 
 
 <div style="background-color:#f5f5f5; padding:10px; font-family:sans-serif;">
-    <a href="${contextPath}/index.jsp">HOME</a> |
+    <a href="${contextPath}/">HOME</a> |
     <a href="${contextPath}/products/list-all">LIST PRODUCTS</a> |
-    <a href="${contextPath}/new-product.jsp">ADD PRODUCT</a>
+    <a href="${contextPath}/products/new-product">ADD PRODUCT</a>
     <a href="${contextPath}/products/search">SEARCH</a>
     
 </div>
