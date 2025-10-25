@@ -6,6 +6,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "products")
@@ -16,9 +18,11 @@ public class Product {
 	int id;
 
 	@Column(name = "name")	
+	@Size(min = 3, max = 10, message = "Name must be at least 3 char and max 10 chars")
 	String name;
 
 	@Column(name = "price")
+	@Min(value = 1, message = "Price must be at least 1")
 	float price;
 
 	@Column(name = "category")

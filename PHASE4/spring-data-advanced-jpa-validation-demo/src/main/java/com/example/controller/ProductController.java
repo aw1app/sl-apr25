@@ -6,6 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +17,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.entity.Product;
 import com.example.repositry.ProductRepositry;
+
+import jakarta.validation.Valid;
 
 @Controller
 @RequestMapping("/products")
@@ -92,12 +96,27 @@ public class ProductController {
 	}
 
 	@PostMapping("/new-product")
-	public String addProduct(Product product, RedirectAttributes redirectAttributes) {
-		
-		Product prodCreated = productRepositry.save(product); // prodCreated will also have the id, returned from the DB.
-		
-		redirectAttributes.addFlashAttribute("message", "Product (id=" + prodCreated.getId() + ") created successfully!");
-		
+	public String addProduct(@Valid Product product, BindingResult result, RedirectAttributes redirectAttributes) {
+
+		if (result.hasErrors()) {
+
+			List<ObjectError> errors = result.getAllErrors();
+			String errorMessages = "";
+			for (ObjectError errorObj : errors) {
+				errorMessages = errorMessages+ "<br>" + errorObj.getDefaultMessage();
+			};
+			System.out.println("errorMessages="+errorMessages);
+
+			redirectAttributes.addFlashAttribute("message", "<p style='color:red'> Product creation failed!. Reason(s):" + errorMessages +"<p>");
+
+		} else {
+
+			Product prodCreated = productRepositry.save(product); // prodCreated will also have the id, returned from
+																	// the DB.
+
+			redirectAttributes.addFlashAttribute("message",
+					"Product (id=" + prodCreated.getId() + ") created successfully!");
+		}
 		return "redirect:/products/list-all"; // WEB-INF/views/products.jsp
 	}
 
