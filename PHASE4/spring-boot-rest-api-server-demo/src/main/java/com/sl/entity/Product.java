@@ -19,7 +19,7 @@ public class Product {
 	int id;
 
 	@Column(name = "name")	
-	@Size(min = 3, max = 10, message = "Name must be at least 3 char and max 10 chars")
+	@Size(min = 3, max = 20, message = "Name must be at least 3 chars and max 20 chars")
 	String name;
 
 	@Column(name = "price")
