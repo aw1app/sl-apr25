@@ -1,0 +1,10 @@
+Issue-1: Filename corrected from spring-cloud-product-microservice.properties to spring-cloud-products-microservice.properties
+It's now in PHASE4 folder.
+
+Issue-2: UI microservice pom.xml need not have the config starter dependency. Removed it.
+
+
+With above two fixes, no startup errors in products microservice  and http://localhost/ui/products/list-all shows all products.
+
+
+Always first start the DISCOVERY SERVER then the CONFIG SERVER, and then the MICROSERVICES.
